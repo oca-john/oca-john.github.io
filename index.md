@@ -31,4 +31,4 @@ This site had taken the layout and styles from the Jekyll theme which was config
 
 ### Support or Contact
 
-Having trouble with my Pages? Let me know your words by mailing me, and my E-mail adrress is zhangxiyh@yahoo.com.
+Having trouble with my Pages? Let me know your words by mailing me, and my E-mail adrress is `zhangxiyh@yahoo.com`.
