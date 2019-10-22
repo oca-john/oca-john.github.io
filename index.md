@@ -11,12 +11,10 @@
 ### 其他有趣的编程语言也有些许涉及
 这些是我的[C++](https://github.com/oca-john/Cpp-RobustOld), [JavaScript](https://github.com/oca-john/JavaScript-FrontEnd), [Lua](https://github.com/oca-john/Lua-LightWeight), [Python3](https://github.com/oca-john/Python3-New2Learn)代码Github页面。
 
-### 声明
-所有这些信息都是通过Markdown语法组织展示的。
-
-This site had taken the layout and styles from the Jekyll theme which was configured by `_config.yml` configuration file.
-
 ---
+
+### 声明
+所有这些信息都是通过Markdown语法组织展示的，并采用了Jekyll的主题来渲染网页格式（文件为`_config.yml`）。
 
 ### 支持和联系方式
 如果对本页面内容有任何疑问，请通过我的E-mail联系我，我的E-mail地址是：`zhangxiyh@yahoo.com`。
