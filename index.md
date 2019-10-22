@@ -14,7 +14,7 @@
 ---
 
 ### 声明
-所有这些信息都是通过Markdown语法组织展示的，并采用了Jekyll的主题来渲染网页格式（文件为`_config.yml`）。
+所有这些信息都是通过Markdown语法组织展示的，并采用了Slate的主题来渲染网页样式（文件为`_config.yml`）。
 
-### 支持和联系方式
-如果对本页面内容有任何疑问，请通过我的E-mail联系我，我的E-mail地址是：`zhangxiyh@yahoo.com`。
+### 支持和联系
+如果对本页面内容有任何疑问，请通过我的E-mail联系我：`zhangxiyh@yahoo.com`。
