@@ -24,8 +24,8 @@ Syntax highlighted code block
 ```
 
 ### 个人开发兴趣在Perl和R方面
-这是我的Perl代码Github页面：
-https://github.com/oca-john/Perl-BestScript
+这是我的[Perl][perllink]代码Github页面：
+[perllink] https://github.com/oca-john/Perl-BestScript
 
 这是我的R代码Github页面：
 https://github.com/oca-john/R-VisualizationTool
