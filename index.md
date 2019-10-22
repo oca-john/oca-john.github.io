@@ -24,11 +24,7 @@ Syntax highlighted code block
 ```
 
 ### 个人开发兴趣在Perl和R方面
-[Google][]
-[Google]: http://www.google.com/ "Google"
-
-这是我的[Perl][perlln]代码Github页面：
-[perlln]:https://github.com/oca-john/Perl-BestScript 'Perl'
+这是我的[Perl](https://github.com/oca-john/Perl-BestScript)代码Github页面：
 
 这是我的R代码Github页面：
 https://github.com/oca-john/R-VisualizationTool
