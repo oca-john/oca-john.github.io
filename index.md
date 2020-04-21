@@ -8,15 +8,19 @@
   - 当前聚焦于时间序列数据与深度学习相结合，相关工具和框架的学习和部署落地；
 
 ## 1. 关于Linux环境的背景知识和部署
-计算环境搭建和使用方面的经验都将汇总到我的GitHub的[LinuxRuntime](https://github.com/oca-john/Linux-Runtime)页面中，旨在方便自己回顾查看，也欢迎感兴趣的开发者浏览。
+- [LinuxRuntime](https://github.com/oca-john/Linux-Runtime)计算环境的搭建，主要指openSUSE、Debian等发行版的安装、配置、初始化设置。
+计算环境搭建和使用方面的经验都将汇总到我的GitHub的页面中，旨在方便自己回顾查看，也欢迎感兴趣的开发者浏览。
 
 ## 2. 基础命令行工具
-- 基础的Bash
+- Bash工具、Zsh工具和Shell编程基础，用于在Linux环境最日常的文件管理和简短的sh脚本处理。
+- Vim编辑器和nano编辑器，主要用于文本的编辑、批量"Pattern"的处理、系统配置文件的修改。
+- Markdown语法，用于日常学习笔记的记录。
+- RE正则表达式语法，用于与Perl语言和Python语言结合，处理
 
 ## 3. 生物信息学工具语言和工具链部署与实战
-- [Python3](https://github.com/oca-john/Python3-New2Learn)语法上比Python2更清晰（函数方面），在生信领域由于具有与[Perl](https://github.com/oca-john/Perl-BestScript)相当的
-- [R语言](https://github.com/oca-john/R-VisualizationTool)是
-- GUI界面开发方面，目前有两种倾向性：一是使用Qt，即Qt的Python3绑定；二是使用IUP或Tk模块基于[Python3](https://github.com/oca-john/Python3-New2Learn)语言编程（IUP可以搭配Lua语言写UI）。
+- [Python3](https://github.com/oca-john/Python3-New2Learn)语法上比Python2更清晰（函数方面），在生信领域由于具有与[Perl](https://github.com/oca-john/Perl-BestScript)相当的功能性函数和第三方库。同时也具备与[R语言](https://github.com/oca-john/R-VisualizationTool)相当的可视化函数和包。
+- [R语言](https://github.com/oca-john/R-VisualizationTool)是衍生于S语言的统计学编程语言，在生信领域具有非常多的用户，可用于数据抓取、清洗、统计分析、统计推断和可视化。
+- GUI界面开发方面，目前有两种倾向性：一是使用Qt，即Qt的[Python3](https://github.com/oca-john/Python3-New2Learn)绑定；二是使用IUP或Tk模块基于[Python3](https://github.com/oca-john/Python3-New2Learn)语言编程（IUP可以搭配Lua语言写UI）。
 - [Perl](https://github.com/oca-john/Perl-BestScript)语言是经典生信工具，具有积累了几十年的社区代码。[Perl](https://github.com/oca-john/Perl-BestScript)脚本语言比较古老，在文本处理方面由于深度整合的正则表达式，效率非常高。深度学习领域，在自然语言处理方面，应用前景良好。
 
 ## 4. 基于深度学习技术挖掘时间序列数据
