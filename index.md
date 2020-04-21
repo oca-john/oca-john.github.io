@@ -2,20 +2,22 @@
 - 我是`oca_john`，本页面是`github.io`的跟站点，用于构建个人主页，站点地址是：`oca-john.github.io`。
 - 本站点主要用于概述个人github站点的主要内容。
 - 具体包括：
-  - Linux和相关计算环境的部署；
+  - [Linux](https://github.com/oca-john/Linux-Runtime)和相关计算环境的部署；
   - 基础命令行工具的使用；
   - 个人学习开始于生物信息学，相关工具语言和工具链的部署与实战；
   - 当前聚焦于时间序列数据与深度学习相结合，相关工具和框架的学习和部署落地；
 
 ## 1. 关于Linux环境的背景知识和部署
-- [LinuxRuntime](https://github.com/oca-john/Linux-Runtime)计算环境的搭建，主要指openSUSE、Debian等发行版的安装、配置、初始化设置。
+- [Linux](https://github.com/oca-john/Linux-Runtime)计算环境的搭建，主要指openSUSE、Debian、CentOS等发行版的安装、配置、初始化设置。目前倾向于openSUSE发行版，因为YaST工具能跨环境实现对系统软硬件的管理。在某些方面（如软件管理），Debian系发行版可借助KDE套件中的管理器或新立得管理器实现。
+- 在Windows10下，借由Subsystem平台，安装部署openSUSE、Debian、Ubuntu等发行版，由于本身构建与Windows文件系统至上，可以将纯命令行的[Linux](https://github.com/oca-john/Linux-Runtime)软件和Windows的文件结合起来，用于流文件处理非常方便。最大的不足是稳定性。
+- 在虚拟机中，安装部署openSUSE、Debian等发行版，并通过虚拟机克隆，快速实现多个虚拟机系统的部署，为模拟集群做基础。
 计算环境搭建和使用方面的经验都将汇总到我的GitHub的页面中，旨在方便自己回顾查看，也欢迎感兴趣的开发者浏览。
 
 ## 2. 基础命令行工具
-- Bash工具、Zsh工具和Shell编程基础，用于在Linux环境最日常的文件管理和简短的sh脚本处理。
+- Bash工具、Zsh工具和Shell编程基础，用于在[Linux](https://github.com/oca-john/Linux-Runtime)环境最日常的文件管理和简短的sh脚本处理。
 - Vim编辑器和nano编辑器，主要用于文本的编辑、批量"Pattern"的处理、系统配置文件的修改。
 - Markdown语法，用于日常学习笔记的记录。
-- RE正则表达式语法，用于与Perl语言和Python语言结合，处理
+- RE正则表达式语法，用于与[Perl](https://github.com/oca-john/Perl-BestScript)语言和[Python3](https://github.com/oca-john/Python3-New2Learn)语言结合，处理大量的规则化文本信息。
 
 ## 3. 生物信息学工具语言和工具链部署与实战
 - [Python3](https://github.com/oca-john/Python3-New2Learn)语法上比Python2更清晰（函数方面），在生信领域由于具有与[Perl](https://github.com/oca-john/Perl-BestScript)相当的功能性函数和第三方库。同时也具备与[R语言](https://github.com/oca-john/R-VisualizationTool)相当的可视化函数和包。
