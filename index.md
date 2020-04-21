@@ -13,19 +13,28 @@
 ## 基础命令行工具
 - 基础的Bash
 
-## 个人开发兴趣在机器学习和生物信息学，主要使用Python3和R语言
-欢迎访问我的[Python3](https://github.com/oca-john/Python3-New2Learn), 和[R语言](https://github.com/oca-john/R-VisualizationTool)学习代码的Github页面。  
+## 生物信息学工具语言和工具链部署与实战
+- [Python3](https://github.com/oca-john/Python3-New2Learn)是
+- [R语言](https://github.com/oca-john/R-VisualizationTool)学习代码的Github页面。  
 
 GUI界面开发方面，目前有两种倾向性：一是使用Qt，即Qt的Python3绑定；二是使用IUP或Tk模块基于Python3语言编程（IUP可以搭配Lua语言写UI）。  
+- [Perl](https://github.com/oca-john/Perl-BestScript)语言是经典生信工具，具有积累了几十年的社区代码。Perl脚本语言比较古老，在文本处理方面由于深度整合的正则表达式，效率非常高。深度学习领域，在自然语言处理方面，应用前景良好。
+
+## 基于深度学习技术挖掘时间序列数据
+- 深度学习领域主要的语言是C++和Python。前者胜在执行效率高，方便部署。后者胜在语法简单，方便学习。
+- 在时间序列数据处理方面，较有优势的是Matlab和Python。前者是闭源的，有极具实力的Mathwork公司成熟的开发历史。后者是开源的，胜在庞大的社区贡献的大量第三方包。
+- 基于两方面考虑，选择Python为基本语言，pytorch是当前流行的基于动态图的深度学习框架，MNE可用于神经科学的时间序列数据处理和挖掘。
 
 ## 其他有趣的编程语言也有些许涉及
-这些是我的[C++](https://github.com/oca-john/Cpp-RobustOld), [JavaScript](https://github.com/oca-john/JavaScript-FrontEnd), [Perl](https://github.com/oca-john/Perl-BestScript), [Lua](https://github.com/oca-john/Lua-LightWeight)代码Github页面。  
-C++在执行效率上比较有优势，兼具C语言的效率，又较之有了更多的扩展库。JavaScript嵌套与网页，在网页开发，Web应用开发方面有优势，目前有统一前端的趋势。Perl脚本语言比较古老，在文本处理方面由于深度整合的正则表达式，效率非常高，在自然语言处理方面，应用前景良好。Lua是一种辅助型的界面开发语言，核心是C语言开发的，与Perl或Python配合，开发相关软件的界面。
+- 主要包括直接操作底层机器时效率飞起的[C++](https://github.com/oca-john/Cpp-RobustOld)。C++在执行效率上比较有优势，兼具C语言的效率，又较之有了更多的扩展库。应用最多的领域是系统开发、硬件驱动开发、大型游戏开发。
+- 基于C语言的[Lua](https://github.com/oca-john/Lua-LightWeight)，是一种辅助型的界面开发语言，核心是C语言，相当于是C的扩展。能够与Perl或Python完美配合。在开发相关软件的界面时，比二者效率更高。另外大名鼎鼎的Torch深度学习框架也是基于Lua语言。
+- 统一了前端开发领域的[JavaScript](https://github.com/oca-john/JavaScript-FrontEnd)，JavaScript嵌套于网页中，在进行Web开发和跨平台应用开发方面潜力也十分巨大。
 
 ---
 
 ## 声明
-所有这些信息都是通过Markdown语法组织展示的，并采用了Slate的主题来渲染网页样式（文件为`_config.yml`）。  
+- 上述所有信息都是通过Markdown语法组织展示的，并采用了Slate的主题来渲染网页样式（文件为`_config.yml`）。  
+- 本人的站点目前全部采用MIT开源协议释出。
 
 ## 支持和联系
-如果对本页面内容有任何疑问，请通过我的E-mail联系我：`zhangxiyh@yahoo.com`。  
+- 如果对本页面内容有任何疑问，请通过我的E-mail联系我：`zhangxiyh@yahoo.com`。  
