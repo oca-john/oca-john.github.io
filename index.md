@@ -1,5 +1,5 @@
 # 欢迎您访问我的GitHub主页
-- 我是`oca_john`，本页面是`github.io`的跟站点，用于构建个人主页，站点地址是：`oca-john.github.io`。
+- 我是`oca_john`，本页面是`github.io`的根站点，用于构建个人主页，站点地址是：`oca-john.github.io`。
 - 本站点主要用于概述个人github站点的主要内容。
 - 具体包括：
   - [Linux](https://github.com/oca-john/Linux-Runtime)和相关计算环境的部署；
