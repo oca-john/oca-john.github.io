@@ -1,6 +1,6 @@
 # 欢迎您访问我的GitHub主页
 - 我是`oca_john`，本页面是`github.io`的根站点，用于管理个人Github的代码树简介。
-- 欢迎访问我的个人主页： [Homepage_of_xi](https://oca-john.github.io/homepage-xi/), `https://oca-john.github.io/homepage-xi/`
+- 欢迎访问我的个人主页，[Homepage_of_xi](https://oca-john.github.io/homepage-xi/): `https://oca-john.github.io/homepage-xi/`
 - 本页面主要用于概述个人github站点的主要内容。
 - 具体包括：
   1. [Linux](https://github.com/oca-john/Linux-Runtime)和相关计算环境的部署；
