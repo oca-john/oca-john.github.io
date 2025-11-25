@@ -1,4 +1,4 @@
-# 🎓 Academic < Xi Zhang >
+# 🎓 Academic
 
 This is my academic page.
 
