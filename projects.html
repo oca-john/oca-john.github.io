@@ -3,26 +3,72 @@
 <head>
     <title>Xi Zhang's Academic Page</title>
     <style>
+        html, body {
+            height: 100%;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         header {
-            text-align: center;
-            background-color: #fff;
-            padding: 2px;
-        }
-        nav {
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             background-color: #2f4161;
-            padding-top: 10px;
-            padding-bottom: 10px;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
-        nav a {
-            margin: 0 20px; /* 导航项目间距 */
+        header .left {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #fff;
+        }
+        header nav {
+            display: flex;
+            gap: 20px;
+        }
+        header nav a {
             text-decoration: none;
             color: #fff;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        header .right-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        header .name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #fff;
+        }
+        .lang-switcher {
+            display: flex;
+            gap: 5px;
+        }
+        .lang-btn {
+            background: transparent;
+            border: 1px solid #fff;
+            color: #fff;
+            padding: 2px 8px;
+            cursor: pointer;
+            font-size: 0.85em;
+            border-radius: 3px;
+        }
+        .lang-btn:hover, .lang-btn.active {
+            background: #fff;
+            color: #2f4161;
         }
         section {
             display: flex;
@@ -30,20 +76,24 @@
             justify-content: space-between;
             line-height: 1.5;
             padding: 20px;
+            padding-top: 60px;
+            flex: 1;
         }
         footer {
             text-align: center;
             background-color: #2f4161;
-            width: 100%; /* 设置为最大宽度 */
-            position: absolute;
+            width: 100%;
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-around;
+            margin-top: auto;
+            padding: 10px 0;
         }
-        .footer-l {
-            flex: 1;
-        }
-        .footer-r {
-            flex: 1;
+        .footer-col {
+            flex: 1 0 25%;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
         }
         footer a {
             text-decoration: none;
@@ -53,39 +103,56 @@
 </head>
 <body>
     <header>
-        <h1>&#x1F393; Academic / Xi Zhang</h1>
+        <span class="left" data-i18n="academic">&#x1F393; Academic</span>
+        <nav>
+            <a href="index.html" data-i18n="home">&#x1F3E0; Home</a>
+            <a href="papers.html" data-i18n="papers">&#x1F4F0; Papers</a>
+            <a href="projects.html" data-i18n="projects">&#x1F4D3; Projects</a>
+        </nav>
+        <div class="right-group">
+            <span class="name">Xi Zhang</span>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+                <button class="lang-btn" data-lang="zh-CN" onclick="setLang('zh-CN')">简</button>
+                <button class="lang-btn" data-lang="zh-TW" onclick="setLang('zh-TW')">繁</button>
+            </div>
+        </div>
     </header>
-    <nav>
-        <a href="index.html">&#x1F3E0; Home</a>
-        <a href="papers.html">&#x1F4F0; Papers</a>
-        <a href="projects.html">&#x1F4D3; Projects</a>
-        <a href="plan.html">&#x1F4C5; Plan</a>
-        <a href="interest.html">&#127912; Interest</a>
-        <a href="about.html">&#128214; About</a>
-    </nav>
     <section>
         <div class="content">
-            <h2>&#x1F4D3; Projects</h2>
+            <h2 data-i18n="projectsTitle">&#x1F4D3; Projects</h2>
                 <ol>
-                    <p><li>&#x2705; A series of characteristic representation methods for high-dimensional physiological signals.</li></p>
-                    <p><li>&#x2B1C; A series of application articles related to feature methods.</li></p>
-                    <p><li>&#x2B1C; A model of neural networks closer to the biological brain.</li></p>
+                    <p><li>&#x2705; <span data-i18n="project1">A series of characteristic representation methods for high-dimensional physiological signals.</span></li></p>
+                    <p><li>&#x2B1C; <span data-i18n="project2">A series of application articles related to feature methods.</span></li></p>
+                    <p><li>&#x2B1C; <span data-i18n="project3">A model of neural networks closer to the biological brain.</span></li></p>
                 </ol>
+            <h2 data-i18n="aboutTitle">&#128214; About me</h2>
+            <p data-i18n="aboutDesc">I am a graduate student in the School of Life Science at the Northwestern Polytechnical University(NPU). I am currently working on my Ph.D degree in the same department. My research interests are in the area of machine learning. I am also interested in the applications of deep learning in healthcare and social sciences.</p>
+            <ol>
+                <p><li>&#x2B1C; <a href="https://www.nwpu.edu.cn/"><span data-i18n="edu1">Northwestern Polytechnical University (2018~Present)</span></a></li></p>
+                <p><li>&#x2705; <a href="https://www.snnu.edu.cn/"><span data-i18n="edu2">Shaanxi Normal University (2014~2018)</span></a></li></p>
+                <p><li>&#x2705; <a href="https://www.yau.edu.cn"><span data-i18n="edu3">Yan'an University (2010~2014)</span></a></li></p>
+            </ol>
         </div>
     </section>
     <footer class="footer">
-        <div class="footer-l">
-            <p><a href="https://orcid.org/0009-0000-2861-0626"><img src="imgs/orcid.svg" style="height: 18px; width: auto;"/> ORCID</a></p>
-            <p><a href="https://pubmed.ncbi.nlm.nih.gov/?term=%28%28zhang+xi%5BAuthor%5D%29+AND+%28yang+hui%5BAuthor%5D%29+AND+%28Northwestern+Polytechnical+University%5BAffiliation%5D%29%29&sort="><img src="imgs/pubmed.png" style="height: 18px; width: auto;"/> Pubmed</a></p>
-            <p><a href="https://scholar.google.com/citations?user=OCXZaZgAAAAJ&hl=en"><img src="imgs/scholar.png" style="height: 18px; width: auto;"/> GoogleScholar</a></p>
-            <p><a href="https://www.researchgate.net/profile/Xi_Zhang33"><img src="imgs/researchgate.png" style="height: 18px; width: auto;"/> ResearchGate</a></p>
+        <div class="footer-col">
+            <a href="https://orcid.org/0009-0000-2861-0626"><img src="imgs/orcid.svg" style="height: 18px; width: auto;"/> ORCID</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/?term=%28%28zhang+xi%5BAuthor%5D%29+AND+%28yang+hui%5BAuthor%5D%29+AND+%28Northwestern+Polytechnical+University%5BAffiliation%5D%29%29&sort="><img src="imgs/pubmed.png" style="height: 18px; width: auto;"/> Pubmed</a>
         </div>
-        <div class="footer-r">
-            <p><a href="mailto:oca-john@hotmail.com">&#x1F4E8; Email</a></p>
-            <p><a href="https://github.com/oca-john"><img src="imgs/github.png" style="height: 18px; width: auto;"/> GitHub</a></p>
-            <p><a href="https://www.linkedin.com/in/xizhang2024/"><img src="imgs/linkedin.png" style="height: 18px; width: auto;"/> LinkedIn</a></p>
-            <p><a href="https://twitter.com/Xi_Zhang_2024"><img src="imgs/twitterx.png" style="height: 18px; width: auto;"/> X / <img src="imgs/twitter.png" style="height: 18px; width: auto;"/> Twitter</a></p>
+        <div class="footer-col">
+            <a href="https://scholar.google.com/citations?user=OCXZaZgAAAAJ&hl=en"><img src="imgs/scholar.png" style="height: 18px; width: auto;"/> GoogleScholar</a>
+            <a href="https://www.researchgate.net/profile/Xi_Zhang33"><img src="imgs/researchgate.png" style="height: 18px; width: auto;"/> ResearchGate</a>
+        </div>
+        <div class="footer-col">
+            <a href="mailto:oca-john@hotmail.com">&#x1F4E8; Email</a>
+            <a href="https://github.com/oca-john"><img src="imgs/github.png" style="height: 18px; width: auto;"/> GitHub</a>
+        </div>
+        <div class="footer-col">
+            <a href="https://www.linkedin.com/in/xizhang2024/"><img src="imgs/linkedin.png" style="height: 18px; width: auto;"/> LinkedIn</a>
+            <a href="https://twitter.com/Xi_Zhang_2024"><img src="imgs/twitterx.png" style="height: 18px; width: auto;"/> X / <img src="imgs/twitter.png" style="height: 18px; width: auto;"/> Twitter</a>
         </div>
     </footer>
+    <script src="langs.js"></script>
 </body>
 </html>
