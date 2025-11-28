@@ -78,6 +78,10 @@
             padding: 20px;
             padding-top: 60px;
             flex: 1;
+            max-width: 90%;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
         }
         .profile {
             display: flex;
@@ -85,12 +89,10 @@
             padding: 20px;
         }
         .left-container {
-            flex: 90%;
-            align-items: left;
+            flex: 0 0 15%;
         }
         .right-container {
-            flex: 10%;
-            align-items: right;
+            flex: 1;
         }
         footer {
             text-align: center;
@@ -99,17 +101,39 @@
             display: flex;
             justify-content: space-around;
             margin-top: auto;
-            padding: 10px 0;
+            padding: 15px 0;
         }
         .footer-col {
             flex: 1;
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            align-items: center;
+            gap: 8px;
         }
         footer a {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
             text-decoration: none;
             color: #fff;
+        }
+        footer a img {
+            vertical-align: middle;
+        }
+        .paper-item {
+            margin-bottom: 15px;
+        }
+        .paper-title {
+            font-weight: normal;
+        }
+        .paper-authors {
+            color: #555;
+            font-size: 0.95em;
+            margin-left: 2em;
+        }
+        .paper-doi {
+            font-size: 0.9em;
+            margin-left: 2em;
         }
     </style>
 </head>
@@ -132,22 +156,42 @@
     </header>
     <section>
         <div class="profile">
-            <div class="left-container">
+            <div class="left-container"><img src="imgs/xizh-s.jpg" style="height: 150px; width: auto;" alt="pic"></div>
+            <div class="right-container">
                 <p><strong data-i18n="name">Name:</strong> Xi Zhang</p>
                 <p><strong data-i18n="affiliation">Affiliation:</strong> <span data-i18n="affiliationValue">Liangzhu Laboratory</span></p>
                 <p><strong data-i18n="email">Business Email:</strong> oca-john@hotmail.com</p>
             </div>
-            <div class="right-container"><img src="imgs/xizh-s.jpg" style="height: 150px; width: auto;" alt="pic"></div>
         </div>
         <p data-i18n="bio">Despite the widespread adoption of deep learning facilitated by general models, I remain firmly convinced that highly specialized models are irreplaceable in the realm of expertise. Drawing inspiration from biological knowledge and employing computational techniques, I strive for an effective integration of these disciplines in my research endeavors. Currently, my research focus resides in feature representation and feature fusion of time-series data, with the ultimate objective of developing robust analysis and prediction models for such signals.</p>
         <div class="content">
             <h2 data-i18n="papersTitle">&#x1F4F0; Papers</h2>
                 <ol>
-                    <p><li id="ref1">&#x2705; <b>Zhang, X.</b>, Zhang, Y.<sup>*</sup>, Si, Y., Gao, N., Zhang, H., & Yang, H.<sup>*</sup> (2024). A high altitude respiration and SpO2 dataset for assessing the human response to hypoxia. Scientific Data, 11(1), 248. <a href="https://doi.org/10.1038/s41597-024-03065-x">https://doi.org/10.1038/s41597-024-03065-x</a></li></p>
-                    <p><li id="ref1">&#x2705; Zhang, H.<sup>&dagger;</sup>, <b>Zhang, X.<sup>&dagger;</sup></b>, Si, Y., Li, H., Han, J., Yang, C., & Yang, H.<sup>*</sup> (2024). Universal strategy for rapid design and analysis of gas detection peptide chips with positional preference. Sensing and Bio-Sensing Research, 46(2024), 100697. <a href="https://doi.org/10.1016/j.sbsr.2024.100697">https://doi.org/10.1016/j.sbsr.2024.100697</a></li></p>
-                    <p><li id="ref1">&#x2705; Si, Y., Zhang, Y.<sup>*</sup>, <b>Zhang, X.<sup>*</sup></b>, Liu, S., Zhang, H., & Yang, H.<sup>*</sup> (2024). A finer-grained high altitude EEG dataset for hypoxia levels assessment. Scientific Data, 11(1), xxx. <a href="https://doi.org/10.1038/s41597-024-04102-5">https://doi.org/10.1038/s41597-024-04102-5</a></li></p>
-                    <p><li id="ref2">&#x2705; Shi, G., Zhang, P., <b>Zhang, X.</b>, Li, J., Zheng, X., Yan, J., ... & Yang, H. (2023). The spatiotemporal heterogeneity of the biophysical microenvironment during hematopoietic stem cell development: from embryo to adult. Stem Cell Research & Therapy, 14(1), 251. <a href="https://doi.org/10.1186/s13287-023-03464-8">https://doi.org/10.1186/s13287-023-03464-8</a></li></p>
-                    <p><li id="ref3">&#x2705; Li, J., Wang, S., Li, Y., Zhang, N., Gribskov, M., <b>Zhang, X.</b>, ... & Yang, H. (2020). miRNA‐mediated macrophage behaviors responding to matrix stiffness and ox‐LDL. Journal of Cellular Physiology, 235(9), 6139-6153. <a href="https://doi.org/10.1002/jcp.29543">https://doi.org/10.1002/jcp.29543</a></li></p>
+                    <li class="paper-item">
+                        <span class="paper-title">&#x2705; (2024) A high altitude respiration and SpO2 dataset for assessing the human response to hypoxia. <i>Scientific Data</i>, 11(1), 248.</span>
+                        <div class="paper-authors"><b>Zhang, X.</b>, Zhang, Y.<sup>*</sup>, Si, Y., Gao, N., Zhang, H., & Yang, H.<sup>*</sup></div>
+                        <div class="paper-doi"><a href="https://doi.org/10.1038/s41597-024-03065-x">https://doi.org/10.1038/s41597-024-03065-x</a></div>
+                    </li>
+                    <li class="paper-item">
+                        <span class="paper-title">&#x2705; (2024) Universal strategy for rapid design and analysis of gas detection peptide chips with positional preference. <i>Sensing and Bio-Sensing Research</i>, 46, 100697.</span>
+                        <div class="paper-authors">Zhang, H.<sup>&dagger;</sup>, <b>Zhang, X.<sup>&dagger;</sup></b>, Si, Y., Li, H., Han, J., Yang, C., & Yang, H.<sup>*</sup></div>
+                        <div class="paper-doi"><a href="https://doi.org/10.1016/j.sbsr.2024.100697">https://doi.org/10.1016/j.sbsr.2024.100697</a></div>
+                    </li>
+                    <li class="paper-item">
+                        <span class="paper-title">&#x2705; (2024) A finer-grained high altitude EEG dataset for hypoxia levels assessment. <i>Scientific Data</i>, 11(1), 1352.</span>
+                        <div class="paper-authors">Si, Y., Zhang, Y.<sup>*</sup>, <b>Zhang, X.<sup>*</sup></b>, Liu, S., Zhang, H., & Yang, H.<sup>*</sup></div>
+                        <div class="paper-doi"><a href="https://doi.org/10.1038/s41597-024-04102-5">https://doi.org/10.1038/s41597-024-04102-5</a></div>
+                    </li>
+                    <li class="paper-item">
+                        <span class="paper-title">&#x2705; (2023) The spatiotemporal heterogeneity of the biophysical microenvironment during hematopoietic stem cell development: from embryo to adult. <i>Stem Cell Research & Therapy</i>, 14(1), 251.</span>
+                        <div class="paper-authors">Shi, G., Zhang, P., <b>Zhang, X.</b>, Li, J., Zheng, X., Yan, J., ... & Yang, H.</div>
+                        <div class="paper-doi"><a href="https://doi.org/10.1186/s13287-023-03464-8">https://doi.org/10.1186/s13287-023-03464-8</a></div>
+                    </li>
+                    <li class="paper-item">
+                        <span class="paper-title">&#x2705; (2020) miRNA‐mediated macrophage behaviors responding to matrix stiffness and ox‐LDL. <i>Journal of Cellular Physiology</i>, 235(9), 6139-6153.</span>
+                        <div class="paper-authors">Li, J., Wang, S., Li, Y., Zhang, N., Gribskov, M., <b>Zhang, X.</b>, ... & Yang, H.</div>
+                        <div class="paper-doi"><a href="https://doi.org/10.1002/jcp.29543">https://doi.org/10.1002/jcp.29543</a></div>
+                    </li>
                 </ol>
             <h2 data-i18n="projectsTitle">&#x1F4D3; Projects</h2>
                 <ol>
@@ -155,6 +199,13 @@
                     <p><li>&#x2B1C; <span data-i18n="project2">A series of application articles related to feature methods.</span></li></p>
                     <p><li>&#x2B1C; <span data-i18n="project3">A model of neural networks closer to the biological brain.</span></li></p>
                 </ol>
+            <h2 data-i18n="aboutTitle">&#128214; About me</h2>
+            <p data-i18n="aboutDesc">I am a graduate student in the School of Life Science at the Northwestern Polytechnical University(NPU). I am currently working on my Ph.D degree in the same department. My research interests are in the area of machine learning. I am also interested in the applications of deep learning in healthcare and social sciences.</p>
+            <ol>
+                <p><li>&#x2B1C; <a href="https://www.nwpu.edu.cn/"><span data-i18n="edu1">Northwestern Polytechnical University (2018~Present)</span></a></li></p>
+                <p><li>&#x2705; <a href="https://www.snnu.edu.cn/"><span data-i18n="edu2">Shaanxi Normal University (2014~2018)</span></a></li></p>
+                <p><li>&#x2705; <a href="https://www.yau.edu.cn"><span data-i18n="edu3">Yan'an University (2010~2014)</span></a></li></p>
+            </ol>
         </div>
     </section>
     <footer class="footer">

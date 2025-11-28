@@ -78,6 +78,10 @@
             padding: 20px;
             padding-top: 60px;
             flex: 1;
+            max-width: 90%;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
         }
         footer {
             text-align: center;
@@ -87,17 +91,24 @@
             flex-wrap: wrap;
             justify-content: space-around;
             margin-top: auto;
-            padding: 10px 0;
+            padding: 15px 0;
         }
         .footer-col {
-            flex: 1 0 25%;
+            flex: 1;
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            align-items: center;
+            gap: 8px;
         }
         footer a {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
             text-decoration: none;
             color: #fff;
+        }
+        footer a img {
+            vertical-align: middle;
         }
     </style>
 </head>
@@ -126,13 +137,6 @@
                     <p><li>&#x2B1C; <span data-i18n="project2">A series of application articles related to feature methods.</span></li></p>
                     <p><li>&#x2B1C; <span data-i18n="project3">A model of neural networks closer to the biological brain.</span></li></p>
                 </ol>
-            <h2 data-i18n="aboutTitle">&#128214; About me</h2>
-            <p data-i18n="aboutDesc">I am a graduate student in the School of Life Science at the Northwestern Polytechnical University(NPU). I am currently working on my Ph.D degree in the same department. My research interests are in the area of machine learning. I am also interested in the applications of deep learning in healthcare and social sciences.</p>
-            <ol>
-                <p><li>&#x2B1C; <a href="https://www.nwpu.edu.cn/"><span data-i18n="edu1">Northwestern Polytechnical University (2018~Present)</span></a></li></p>
-                <p><li>&#x2705; <a href="https://www.snnu.edu.cn/"><span data-i18n="edu2">Shaanxi Normal University (2014~2018)</span></a></li></p>
-                <p><li>&#x2705; <a href="https://www.yau.edu.cn"><span data-i18n="edu3">Yan'an University (2010~2014)</span></a></li></p>
-            </ol>
         </div>
     </section>
     <footer class="footer">
