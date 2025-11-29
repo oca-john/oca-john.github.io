@@ -27,7 +27,7 @@ const translations = {
         project2: "A series of application articles related to feature methods.",
         project3: "A model of neural networks closer to the biological brain.",
         // About
-        aboutDesc: "I am a postdoctoral researcher at the Liangzhu Laboratory, Zhejiang University, conducting interdisciplinary research on optical brain-computer interfaces and deep learning.",
+        aboutDesc: "With a solid foundation in biological sciences, I began my research career studying microbial ecology before advancing to biochemistry and molecular biology. During my doctoral studies in biomedical engineering, I developed expertise in deep learning modeling for physiological signal analysis, particularly in high-altitude hypoxia research. Currently, as a postdoctoral researcher at Liangzhu Laboratory, I am pioneering interdisciplinary research that integrates my biological background with computational deep learning techniques to advance optical brain-computer interface technologies.",
         edu0: "Liangzhu Laboratory, Zhejiang University (2025~Present)",
         edu0Discipline: "Brain and Brain Science",
         edu0Research: "Optical Brain-Computer Interface",
@@ -39,7 +39,8 @@ const translations = {
         edu2Research: "Mouse Somatic Cell Immortalization",
         edu3: "Yan'an University (2010~2014)",
         edu3Discipline: "Biological Science",
-        edu3Research: "Screening and Identification of Heavy Oil Degrading Microorganisms"
+        edu3Research: "Screening and Identification of Heavy Oil Degrading Microorganisms",
+        copyright: "Designed and built by Xi Zhang. Feel free to cite or fork."
     },
     "zh-CN": {
         academic: "🎓 学术主页",
@@ -63,7 +64,7 @@ const translations = {
         project1: "一系列针对高维生理信号的特征表示方法。",
         project2: "一系列与特征方法相关的应用文章。",
         project3: "一个更接近生物大脑的神经网络模型。",
-        aboutDesc: "我是浙江大学良渚实验室的博士后研究员，从事光学脑机接口与深度学习方面的交叉研究。",
+        aboutDesc: "我拥有扎实的生物学背景，研究生涯从微生物生态学起步，而后深入生物化学与分子生物学领域。在生物医学工程博士阶段，我掌握了针对生理信号分析的深度学习建模技术，尤其在高原缺氧研究方面积累了丰富经验。目前，作为浙江大学良渚实验室的博士后研究员，我正在开展融合生物学背景与计算机深度学习技术的交叉研究，推动光学脑机接口技术的发展。",
         edu0: "浙江大学良渚实验室 (2025~至今)",
         edu0Discipline: "脑与脑科学",
         edu0Research: "光学脑机接口",
@@ -75,7 +76,8 @@ const translations = {
         edu2Research: "小鼠体细胞永生化",
         edu3: "延安大学 (2010~2014)",
         edu3Discipline: "生物科学",
-        edu3Research: "重油降解微生物的筛选与鉴定"
+        edu3Research: "重油降解微生物的筛选与鉴定",
+        copyright: "网站由 Xi Zhang 设计并构建，欢迎引用或构建分支。"
     },
     "zh-TW": {
         academic: "🎓 學術主頁",
@@ -99,7 +101,7 @@ const translations = {
         project1: "一系列針對高維生理信號的特徵表示方法。",
         project2: "一系列與特徵方法相關的應用文章。",
         project3: "一個更接近生物大腦的神經網絡模型。",
-        aboutDesc: "我是浙江大學良渚實驗室的博士後研究員，從事光學腦機接口與深度學習方面的交叉研究。",
+        aboutDesc: "我擁有扎實的生物學背景，研究生涯從微生物生態學起步，而後深入生物化學與分子生物學領域。在生物醫學工程博士階段，我掌握了針對生理信號分析的深度學習建模技術，尤其在高原缺氧研究方面積累了豐富經驗。目前，作為浙江大學良渚實驗室的博士後研究員，我正在開展融合生物學背景與計算機深度學習技術的交叉研究，推動光學腦機接口技術的發展。",
         edu0: "浙江大學良渚實驗室 (2025~至今)",
         edu0Discipline: "腦與腦科學",
         edu0Research: "光學腦機接口",
@@ -111,7 +113,8 @@ const translations = {
         edu2Research: "小鼠體細胞永生化",
         edu3: "延安大學 (2010~2014)",
         edu3Discipline: "生物科學",
-        edu3Research: "重油降解微生物的篩選與鑑定"
+        edu3Research: "重油降解微生物的篩選與鑑定",
+        copyright: "網站由 Xi Zhang 設計並構建，歡迎引用或構建分支。"
     }
 };
 
@@ -159,4 +162,9 @@ function updateLangButtons() {
 document.addEventListener('DOMContentLoaded', () => {
     applyTranslations();
     updateLangButtons();
+    // 动态显示当前年份
+    const yearEl = document.getElementById('currentYear');
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
 });

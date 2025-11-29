@@ -99,6 +99,7 @@
             background-color: #2f4161;
             width: 100%;
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-around;
             margin-top: auto;
             padding: 20px 0;
@@ -119,6 +120,15 @@
         }
         footer a img {
             vertical-align: middle;
+        }
+        .footer-copyright {
+            width: 100%;
+            text-align: center;
+            color: #ccc;
+            font-size: 0.85em;
+            padding-top: 15px;
+            margin-top: 15px;
+            border-top: 1px solid rgba(255,255,255,0.2);
         }
         .paper-item {
             margin-bottom: 15px;
@@ -232,6 +242,9 @@
         <div class="footer-col">
             <a href="mailto:oca-john@hotmail.com">&#x1F4E8; Email</a>
             <a href="https://twitter.com/Xi_Zhang_2024"><img src="imgs/twitterx.png" style="height: 18px; width: auto;"/> X / <img src="imgs/twitter.png" style="height: 18px; width: auto;"/> Twitter</a>
+        </div>
+        <div class="footer-copyright">
+            <span data-i18n="copyright">Designed and built by Xi Zhang. Feel free to cite or fork.</span> | © <span id="currentYear"></span>
         </div>
     </footer>
     <script src="langs.js"></script>
