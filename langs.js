@@ -6,6 +6,7 @@ const translations = {
         home: "🏠 Home",
         papers: "📰 Papers",
         projects: "📓 Projects",
+        about: "📖 About",
         // Profile
         name: "Name:",
         affiliation: "Affiliation:",
@@ -47,6 +48,7 @@ const translations = {
         home: "🏠 首页",
         papers: "📰 论文",
         projects: "📓 项目",
+        about: "📖 关于",
         name: "姓名：",
         affiliation: "单位：",
         affiliationValue: "良渚实验室",
@@ -84,6 +86,7 @@ const translations = {
         home: "🏠 首頁",
         papers: "📰 論文",
         projects: "📓 項目",
+        about: "📖 關於",
         name: "姓名：",
         affiliation: "單位：",
         affiliationValue: "良渚實驗室",
