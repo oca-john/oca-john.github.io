@@ -163,7 +163,7 @@ function updateLangButtons() {
 
 // 获取当前主题
 function getCurrentTheme() {
-    return localStorage.getItem('theme') || 'light';
+    return localStorage.getItem('theme') || 'dark';
 }
 
 // 设置主题
