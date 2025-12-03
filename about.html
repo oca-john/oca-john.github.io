@@ -19,6 +19,14 @@
             --section-bg: #1a1a2e;
             --link-color: #64b5f6;
             --paper-authors: #aaa;
+            --aurora-color-1: rgba(255, 255, 255, 0.18);
+            --aurora-color-2: rgba(180, 200, 255, 0.14);
+            --aurora-color-3: rgba(255, 255, 255, 0.10);
+        }
+        :root {
+            --aurora-color-1: rgba(0, 200, 180, 0.28);
+            --aurora-color-2: rgba(0, 160, 220, 0.22);
+            --aurora-color-3: rgba(80, 220, 160, 0.18);
         }
         html, body {
             height: 100%;
@@ -33,7 +41,82 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
         }
+        .aurora-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        .aurora-bg::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background: repeating-linear-gradient(
+                68deg,
+                transparent 0px, transparent 40px,
+                var(--aurora-color-1) 40px, var(--aurora-color-1) 50px,
+                transparent 50px, transparent 120px,
+                var(--aurora-color-2) 120px, var(--aurora-color-2) 132px,
+                transparent 132px, transparent 200px,
+                var(--aurora-color-3) 200px, var(--aurora-color-3) 210px,
+                transparent 210px, transparent 280px
+            );
+            filter: blur(16px);
+            animation: rays-move 6s linear infinite;
+        }
+        .aurora-bg::after {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background: repeating-linear-gradient(
+                72deg,
+                transparent 0px, transparent 80px,
+                var(--aurora-color-2) 80px, var(--aurora-color-2) 92px,
+                transparent 92px, transparent 180px,
+                var(--aurora-color-1) 180px, var(--aurora-color-1) 194px,
+                transparent 194px, transparent 300px
+            );
+            filter: blur(24px);
+            animation: rays-move 9s linear infinite reverse;
+            opacity: 0.8;
+        }
+        .aurora-wave {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background: repeating-linear-gradient(
+                65deg,
+                transparent 0px, transparent 150px,
+                var(--aurora-color-3) 150px, var(--aurora-color-3) 165px,
+                transparent 165px, transparent 250px,
+                var(--aurora-color-1) 250px, var(--aurora-color-1) 262px,
+                transparent 262px, transparent 400px
+            );
+            filter: blur(30px);
+            animation: rays-move 12s linear infinite;
+            animation-delay: -8s;
+            opacity: 0.6;
+        }
+        @keyframes rays-move {
+            0% { transform: translateX(0) translateY(0); }
+            100% { transform: translateX(280px) translateY(100px); }
+        }
+        header, section, footer { position: relative; z-index: 1; }
         header {
             display: flex;
             justify-content: space-between;
@@ -159,6 +242,7 @@
     </style>
 </head>
 <body>
+    <div class="aurora-bg"><div class="aurora-wave"></div></div>
     <header>
         <span class="left" data-i18n="academic">&#x1F393; Academic</span>
         <nav>
