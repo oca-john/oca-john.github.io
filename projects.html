@@ -17,7 +17,7 @@
             --aurora-color-2-rgb: 30 60 160;
             --aurora-color-3-rgb: 120 180 250;
             --aurora-alpha-min: 0.05;
-            --aurora-alpha-max: 0.10;
+            --aurora-alpha-max: 0.1;
 
             --aurora-alpha-range: calc(var(--aurora-alpha-max) - var(--aurora-alpha-min));
             --aurora-base-alpha-1: calc(var(--aurora-alpha-min) + var(--aurora-alpha-range) * 0.18);
@@ -63,70 +63,25 @@
             --ray-width-medium: calc(var(--ray-width-min) + var(--ray-width-range) * 0.52);
             --ray-width-regular: calc(var(--ray-width-min) + var(--ray-width-range) * 0.72);
             --ray-width-wide: calc(var(--ray-width-min) + var(--ray-width-range) * 0.94);
+        }
+        [data-theme="dark"] {
+            --bg-color: #1a1a2e;
+            --text-color: #e0e0e0;
+            --header-bg: #16213e;
+            --section-bg: #1a1a2e;
+            --link-color: #64b5f6;
+            --paper-authors: #aaa;
 
-            --ray-layer-duration-1: 20s;
-            --ray-layer-duration-2: 30s;
-            --ray-layer-duration-3: 40s;
-            --ray-speed-factor-fast: 1.5;
-            --ray-speed-factor-midfast: 1.2;
-            --ray-speed-factor-base: 1;
-            --ray-speed-factor-midslow: 0.85;
-            --ray-speed-factor-slow: 0.6;
-            --ray-duration-before-1: calc(var(--ray-layer-duration-1) / var(--ray-speed-factor-fast));
-            --ray-duration-before-2: calc(var(--ray-layer-duration-1) / var(--ray-speed-factor-base));
-            --ray-duration-before-3: calc(var(--ray-layer-duration-1) / var(--ray-speed-factor-midslow));
-            --ray-duration-after-1: calc(var(--ray-layer-duration-2) / var(--ray-speed-factor-midfast));
-            --ray-duration-after-2: calc(var(--ray-layer-duration-2) / var(--ray-speed-factor-base));
-            --ray-duration-after-3: calc(var(--ray-layer-duration-2) / var(--ray-speed-factor-slow));
-            --ray-duration-wave-1: calc(var(--ray-layer-duration-3) / var(--ray-speed-factor-fast));
-            --ray-duration-wave-2: calc(var(--ray-layer-duration-3) / var(--ray-speed-factor-midslow));
-            --ray-duration-wave-3: calc(var(--ray-layer-duration-3) / var(--ray-speed-factor-slow));
-            --ray-shift-distance: 840px;
-        }
-        @property --ray-before-shift-1 {
-            syntax: '<length>';
-            inherits: false;
-            initial-value: 0px;
-        }
-        @property --ray-before-shift-2 {
-            syntax: '<length>';
-            inherits: false;
-            initial-value: 0px;
-        }
-        @property --ray-before-shift-3 {
-            syntax: '<length>';
-            inherits: false;
-            initial-value: 0px;
-        }
-        @property --ray-after-shift-1 {
-            syntax: '<length>';
-            inherits: false;
-            initial-value: 0px;
-        }
-        @property --ray-after-shift-2 {
-            syntax: '<length>';
-            inherits: false;
-            initial-value: 0px;
-        }
-        @property --ray-after-shift-3 {
-            syntax: '<length>';
-            inherits: false;
-            initial-value: 0px;
-        }
-        @property --ray-wave-shift-1 {
-            syntax: '<length>';
-            inherits: false;
-            initial-value: 0px;
-        }
-        @property --ray-wave-shift-2 {
-            syntax: '<length>';
-            inherits: false;
-            initial-value: 0px;
-        }
-        @property --ray-wave-shift-3 {
-            syntax: '<length>';
-            inherits: false;
-            initial-value: 0px;
+            --aurora-color-1-rgb: 120 180 255;
+            --aurora-color-2-rgb: 40 80 180;
+            --aurora-color-3-rgb: 140 200 255;
+            --aurora-base-alpha-1: calc(var(--aurora-alpha-min) + var(--aurora-alpha-range) * 0.30);
+            --aurora-base-alpha-2: calc(var(--aurora-alpha-min) + var(--aurora-alpha-range) * 0.55);
+            --aurora-base-alpha-3: calc(var(--aurora-alpha-min) + var(--aurora-alpha-range) * 0.88);
+
+            --aurora-color-1: rgb(var(--aurora-color-1-rgb) / calc(var(--aurora-base-alpha-1) * var(--aurora-opacity-scale)));
+            --aurora-color-2: rgb(var(--aurora-color-2-rgb) / calc(var(--aurora-base-alpha-2) * var(--aurora-opacity-scale)));
+            --aurora-color-3: rgb(var(--aurora-color-3-rgb) / calc(var(--aurora-base-alpha-3) * var(--aurora-opacity-scale)));
         }
 
         html, body {
@@ -187,16 +142,8 @@
                     var(--aurora-color-1) calc(var(--ray-gap-wide) + var(--ray-width-thin) + var(--ray-spacing-large)) calc(var(--ray-gap-wide) + var(--ray-width-thin) + var(--ray-spacing-large) + var(--ray-width-regular)),
                     transparent calc(var(--ray-gap-wide) + var(--ray-width-thin) + var(--ray-spacing-large) + var(--ray-width-regular)) calc(var(--ray-gap-wide) + var(--ray-width-thin) + var(--ray-spacing-large) + var(--ray-width-regular) + var(--ray-spacing-medium))
                 );
-            background-position:
-                var(--ray-before-shift-1) 0,
-                var(--ray-before-shift-2) 0,
-                var(--ray-before-shift-3) 0;
             filter: blur(8px);
-            animation:
-                rays-move-1 var(--ray-layer-duration-1) linear infinite,
-                ray-shift-before-1 var(--ray-duration-before-1) linear infinite,
-                ray-shift-before-2 var(--ray-duration-before-2) linear infinite,
-                ray-shift-before-3 var(--ray-duration-before-3) linear infinite;
+            animation: rays-move-1 50s linear infinite;
         }
 
         .aurora-bg::after {
@@ -231,16 +178,8 @@
                     var(--aurora-color-1) calc(var(--ray-gap-wide) + var(--ray-width-slim) + var(--ray-spacing-large)) calc(var(--ray-gap-wide) + var(--ray-width-slim) + var(--ray-spacing-large) + var(--ray-width-regular)),
                     transparent calc(var(--ray-gap-wide) + var(--ray-width-slim) + var(--ray-spacing-large) + var(--ray-width-regular)) calc(var(--ray-gap-wide) + var(--ray-width-slim) + var(--ray-spacing-large) + var(--ray-width-regular) + var(--ray-spacing-medium))
                 );
-            background-position:
-                var(--ray-after-shift-1) 0,
-                var(--ray-after-shift-2) 0,
-                var(--ray-after-shift-3) 0;
             filter: blur(12px);
-            animation:
-                rays-move-2 var(--ray-layer-duration-2) linear infinite reverse,
-                ray-shift-after-1 var(--ray-duration-after-1) linear infinite,
-                ray-shift-after-2 var(--ray-duration-after-2) linear infinite,
-                ray-shift-after-3 var(--ray-duration-after-3) linear infinite;
+            animation: rays-move-2 25s linear infinite reverse;
             opacity: 0.8;
         }
         .aurora-wave {
@@ -274,55 +213,11 @@
                     var(--aurora-color-1) calc(var(--ray-gap-wide) + var(--ray-width-thin) + var(--ray-spacing-large)) calc(var(--ray-gap-wide) + var(--ray-width-thin) + var(--ray-spacing-large) + var(--ray-width-regular)),
                     transparent calc(var(--ray-gap-wide) + var(--ray-width-thin) + var(--ray-spacing-large) + var(--ray-width-regular)) calc(var(--ray-gap-wide) + var(--ray-width-thin) + var(--ray-spacing-large) + var(--ray-width-regular) + var(--ray-spacing-medium))
                 );
-            background-position:
-                var(--ray-wave-shift-1) 0,
-                var(--ray-wave-shift-2) 0,
-                var(--ray-wave-shift-3) 0;
             filter: blur(15px);
-            animation:
-                rays-move-3 var(--ray-layer-duration-3) linear infinite -8s,
-                ray-shift-wave-1 var(--ray-duration-wave-1) linear infinite,
-                ray-shift-wave-2 var(--ray-duration-wave-2) linear infinite,
-                ray-shift-wave-3 var(--ray-duration-wave-3) linear infinite;
+            animation: rays-move-3 17s linear infinite;
+            animation-delay: -8s;
             opacity: 0.6;
         }
-        @keyframes ray-shift-before-1 {
-            from { --ray-before-shift-1: 0px; }
-            to { --ray-before-shift-1: var(--ray-shift-distance); }
-        }
-        @keyframes ray-shift-before-2 {
-            from { --ray-before-shift-2: 0px; }
-            to { --ray-before-shift-2: var(--ray-shift-distance); }
-        }
-        @keyframes ray-shift-before-3 {
-            from { --ray-before-shift-3: 0px; }
-            to { --ray-before-shift-3: var(--ray-shift-distance); }
-        }
-        @keyframes ray-shift-after-1 {
-            from { --ray-after-shift-1: 0px; }
-            to { --ray-after-shift-1: var(--ray-shift-distance); }
-        }
-        @keyframes ray-shift-after-2 {
-            from { --ray-after-shift-2: 0px; }
-            to { --ray-after-shift-2: var(--ray-shift-distance); }
-        }
-        @keyframes ray-shift-after-3 {
-            from { --ray-after-shift-3: 0px; }
-            to { --ray-after-shift-3: var(--ray-shift-distance); }
-        }
-        @keyframes ray-shift-wave-1 {
-            from { --ray-wave-shift-1: 0px; }
-            to { --ray-wave-shift-1: var(--ray-shift-distance); }
-        }
-        @keyframes ray-shift-wave-2 {
-            from { --ray-wave-shift-2: 0px; }
-            to { --ray-wave-shift-2: var(--ray-shift-distance); }
-        }
-        @keyframes ray-shift-wave-3 {
-            from { --ray-wave-shift-3: 0px; }
-            to { --ray-wave-shift-3: var(--ray-shift-distance); }
-        }
-
         @keyframes rays-move-1 {
             0% { transform: translateX(0) translateY(0) rotate(0deg); }
             25% { transform: translateX(210px) translateY(75px) rotate(3deg); }
