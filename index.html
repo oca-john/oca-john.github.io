@@ -19,14 +19,14 @@
             --section-bg: #1a1a2e;
             --link-color: #64b5f6;
             --paper-authors: #aaa;
-            --aurora-color-1: rgba(120, 180, 255, 0.22);
-            --aurora-color-2: rgba(40, 80, 180, 0.16);
-            --aurora-color-3: rgba(140, 200, 255, 0.18);
+            --aurora-color-1: rgba(120, 180, 255, 0.13);
+            --aurora-color-2: rgba(40, 80, 180, 0.10);
+            --aurora-color-3: rgba(140, 200, 255, 0.11);
         }
         :root {
-            --aurora-color-1: rgba(100, 160, 240, 0.28);
-            --aurora-color-2: rgba(30, 60, 160, 0.20);
-            --aurora-color-3: rgba(120, 180, 250, 0.24);
+            --aurora-color-1: rgba(100, 160, 240, 0.17);
+            --aurora-color-2: rgba(30, 60, 160, 0.12);
+            --aurora-color-3: rgba(120, 180, 250, 0.14);
         }
         html, body {
             height: 100%;
@@ -62,17 +62,33 @@
             height: 200%;
             top: -50%;
             left: -50%;
-            background: repeating-linear-gradient(
-                78deg,
-                transparent 0px, transparent 25px,
-                var(--aurora-color-1) 25px, var(--aurora-color-1) 30px,
-                transparent 30px, transparent 70px,
-                var(--aurora-color-2) 70px, var(--aurora-color-2) 115px,
-                transparent 115px, transparent 165px,
-                var(--aurora-color-1) 165px, var(--aurora-color-1) 285px,
-                transparent 285px, transparent 325px
-            );
-            filter: blur(16px);
+            background:
+                repeating-linear-gradient(
+                    74deg,
+                    transparent 0px, transparent 14px,
+                    var(--aurora-color-1) 14px, var(--aurora-color-1) 20px,
+                    transparent 20px, transparent 58px,
+                    var(--aurora-color-2) 58px, var(--aurora-color-2) 90px
+                ),
+                repeating-linear-gradient(
+                    80deg,
+                    transparent 0px, transparent 26px,
+                    var(--aurora-color-2) 26px, var(--aurora-color-2) 30px,
+                    transparent 30px, transparent 72px,
+                    var(--aurora-color-1) 72px, var(--aurora-color-1) 130px,
+                    transparent 130px, transparent 162px,
+                    var(--aurora-color-2) 162px, var(--aurora-color-2) 168px
+                ),
+                repeating-linear-gradient(
+                    86deg,
+                    transparent 0px, transparent 18px,
+                    var(--aurora-color-3) 18px, var(--aurora-color-3) 22px,
+                    transparent 22px, transparent 64px,
+                    var(--aurora-color-1) 64px, var(--aurora-color-1) 110px,
+                    transparent 110px, transparent 150px,
+                    var(--aurora-color-3) 150px, var(--aurora-color-3) 168px
+                );
+            filter: blur(8px);
             animation: rays-move-1 20s linear infinite;
         }
         .aurora-bg::after {
@@ -82,17 +98,35 @@
             height: 200%;
             top: -50%;
             left: -50%;
-            background: repeating-linear-gradient(
-                92deg,
-                transparent 0px, transparent 30px,
-                var(--aurora-color-2) 30px, var(--aurora-color-2) 38px,
-                transparent 38px, transparent 78px,
-                var(--aurora-color-1) 78px, var(--aurora-color-1) 158px,
-                transparent 158px, transparent 198px,
-                var(--aurora-color-3) 198px, var(--aurora-color-3) 213px,
-                transparent 213px, transparent 250px
-            );
-            filter: blur(24px);
+            background:
+                repeating-linear-gradient(
+                    92deg,
+                    transparent 0px, transparent 18px,
+                    var(--aurora-color-2) 18px, var(--aurora-color-2) 24px,
+                    transparent 24px, transparent 70px,
+                    var(--aurora-color-1) 70px, var(--aurora-color-1) 110px,
+                    transparent 110px, transparent 150px,
+                    var(--aurora-color-3) 150px, var(--aurora-color-3) 168px
+                ),
+                repeating-linear-gradient(
+                    98deg,
+                    transparent 0px, transparent 28px,
+                    var(--aurora-color-1) 28px, var(--aurora-color-1) 36px,
+                    transparent 36px, transparent 84px,
+                    var(--aurora-color-2) 84px, var(--aurora-color-2) 144px,
+                    transparent 144px, transparent 188px,
+                    var(--aurora-color-1) 188px, var(--aurora-color-1) 210px
+                ),
+                repeating-linear-gradient(
+                    88deg,
+                    transparent 0px, transparent 16px,
+                    var(--aurora-color-3) 16px, var(--aurora-color-3) 20px,
+                    transparent 20px, transparent 66px,
+                    var(--aurora-color-2) 66px, var(--aurora-color-2) 120px,
+                    transparent 120px, transparent 168px,
+                    var(--aurora-color-1) 168px, var(--aurora-color-1) 188px
+                );
+            filter: blur(12px);
             animation: rays-move-2 30s linear infinite reverse;
             opacity: 0.8;
         }
@@ -102,17 +136,35 @@
             height: 200%;
             top: -50%;
             left: -50%;
-            background: repeating-linear-gradient(
-                85deg,
-                transparent 0px, transparent 40px,
-                var(--aurora-color-3) 40px, var(--aurora-color-3) 160px,
-                transparent 160px, transparent 210px,
-                var(--aurora-color-1) 210px, var(--aurora-color-1) 216px,
-                transparent 216px, transparent 266px,
-                var(--aurora-color-2) 266px, var(--aurora-color-2) 326px,
-                transparent 326px, transparent 375px
-            );
-            filter: blur(30px);
+            background:
+                repeating-linear-gradient(
+                    82deg,
+                    transparent 0px, transparent 24px,
+                    var(--aurora-color-3) 24px, var(--aurora-color-3) 32px,
+                    transparent 32px, transparent 70px,
+                    var(--aurora-color-1) 70px, var(--aurora-color-1) 128px,
+                    transparent 128px, transparent 172px,
+                    var(--aurora-color-2) 172px, var(--aurora-color-2) 188px
+                ),
+                repeating-linear-gradient(
+                    76deg,
+                    transparent 0px, transparent 18px,
+                    var(--aurora-color-1) 18px, var(--aurora-color-1) 22px,
+                    transparent 22px, transparent 60px,
+                    var(--aurora-color-3) 60px, var(--aurora-color-3) 110px,
+                    transparent 110px, transparent 150px,
+                    var(--aurora-color-1) 150px, var(--aurora-color-1) 168px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent 0px, transparent 34px,
+                    var(--aurora-color-2) 34px, var(--aurora-color-2) 40px,
+                    transparent 40px, transparent 82px,
+                    var(--aurora-color-1) 82px, var(--aurora-color-1) 140px,
+                    transparent 140px, transparent 188px,
+                    var(--aurora-color-3) 188px, var(--aurora-color-3) 210px
+                );
+            filter: blur(15px);
             animation: rays-move-3 40s linear infinite;
             animation-delay: -8s;
             opacity: 0.6;

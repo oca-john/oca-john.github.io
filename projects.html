@@ -11,9 +11,9 @@
             --section-bg: #ffffff;
             --link-color: #2f4161;
             --paper-authors: #555;
-            --aurora-color-1: rgba(100, 160, 240, 0.28);
-            --aurora-color-2: rgba(30, 60, 160, 0.20);
-            --aurora-color-3: rgba(120, 180, 250, 0.24);
+            --aurora-color-1: rgba(100, 160, 240, 0.17);
+            --aurora-color-2: rgba(30, 60, 160, 0.12);
+            --aurora-color-3: rgba(120, 180, 250, 0.14);
         }
         [data-theme="dark"] {
             --bg-color: #1a1a2e;
@@ -22,9 +22,9 @@
             --section-bg: #1a1a2e;
             --link-color: #64b5f6;
             --paper-authors: #aaa;
-            --aurora-color-1: rgba(120, 180, 255, 0.22);
-            --aurora-color-2: rgba(40, 80, 180, 0.16);
-            --aurora-color-3: rgba(140, 200, 255, 0.18);
+            --aurora-color-1: rgba(120, 180, 255, 0.13);
+            --aurora-color-2: rgba(40, 80, 180, 0.10);
+            --aurora-color-3: rgba(140, 200, 255, 0.11);
         }
         html, body {
             height: 100%;
@@ -61,15 +61,21 @@
             left: -50%;
             background: repeating-linear-gradient(
                 78deg,
-                transparent 0px, transparent 25px,
-                var(--aurora-color-1) 25px, var(--aurora-color-1) 30px,
-                transparent 30px, transparent 70px,
-                var(--aurora-color-2) 70px, var(--aurora-color-2) 115px,
-                transparent 115px, transparent 165px,
-                var(--aurora-color-1) 165px, var(--aurora-color-1) 285px,
-                transparent 285px, transparent 325px
+                transparent 0px, transparent 20px,
+                var(--aurora-color-1) 20px, var(--aurora-color-1) 24px,
+                transparent 24px, transparent 60px,
+                var(--aurora-color-2) 60px, var(--aurora-color-2) 130px,
+                transparent 130px, transparent 160px,
+                var(--aurora-color-1) 160px, var(--aurora-color-1) 166px,
+                transparent 166px, transparent 200px,
+                var(--aurora-color-1) 200px, var(--aurora-color-1) 230px,
+                transparent 230px, transparent 260px,
+                var(--aurora-color-2) 260px, var(--aurora-color-2) 265px,
+                transparent 265px, transparent 300px,
+                var(--aurora-color-1) 300px, var(--aurora-color-1) 310px,
+                transparent 310px, transparent 400px
             );
-            filter: blur(16px);
+            filter: blur(8px);
             animation: rays-move-1 20s linear infinite;
         }
         .aurora-bg::after {
@@ -83,13 +89,17 @@
                 92deg,
                 transparent 0px, transparent 30px,
                 var(--aurora-color-2) 30px, var(--aurora-color-2) 38px,
-                transparent 38px, transparent 78px,
-                var(--aurora-color-1) 78px, var(--aurora-color-1) 158px,
-                transparent 158px, transparent 198px,
-                var(--aurora-color-3) 198px, var(--aurora-color-3) 213px,
-                transparent 213px, transparent 250px
+                transparent 38px, transparent 70px,
+                var(--aurora-color-1) 70px, var(--aurora-color-1) 160px,
+                transparent 160px, transparent 200px,
+                var(--aurora-color-3) 200px, var(--aurora-color-3) 205px,
+                transparent 205px, transparent 240px,
+                var(--aurora-color-2) 240px, var(--aurora-color-2) 260px,
+                transparent 260px, transparent 290px,
+                var(--aurora-color-1) 290px, var(--aurora-color-1) 296px,
+                transparent 296px, transparent 350px
             );
-            filter: blur(24px);
+            filter: blur(12px);
             animation: rays-move-2 30s linear infinite reverse;
             opacity: 0.8;
         }
@@ -102,14 +112,20 @@
             background: repeating-linear-gradient(
                 85deg,
                 transparent 0px, transparent 40px,
-                var(--aurora-color-3) 40px, var(--aurora-color-3) 160px,
-                transparent 160px, transparent 210px,
-                var(--aurora-color-1) 210px, var(--aurora-color-1) 216px,
-                transparent 216px, transparent 266px,
-                var(--aurora-color-2) 266px, var(--aurora-color-2) 326px,
-                transparent 326px, transparent 375px
+                var(--aurora-color-3) 40px, var(--aurora-color-3) 45px,
+                transparent 45px, transparent 80px,
+                var(--aurora-color-1) 80px, var(--aurora-color-1) 86px,
+                transparent 86px, transparent 130px,
+                var(--aurora-color-2) 130px, var(--aurora-color-2) 190px,
+                transparent 190px, transparent 230px,
+                var(--aurora-color-1) 230px, var(--aurora-color-1) 238px,
+                transparent 238px, transparent 280px,
+                var(--aurora-color-3) 280px, var(--aurora-color-3) 320px,
+                transparent 320px, transparent 360px,
+                var(--aurora-color-2) 360px, var(--aurora-color-2) 365px,
+                transparent 365px, transparent 450px
             );
-            filter: blur(30px);
+            filter: blur(15px);
             animation: rays-move-3 40s linear infinite;
             animation-delay: -8s;
             opacity: 0.6;
