@@ -11,6 +11,121 @@
             --section-bg: #ffffff;
             --link-color: #2f4161;
             --paper-authors: #555;
+
+            --aurora-opacity-scale: 1;
+            --aurora-color-1-rgb: 100 160 240;
+            --aurora-color-2-rgb: 30 60 160;
+            --aurora-color-3-rgb: 120 180 250;
+            --aurora-alpha-min: 0.05;
+            --aurora-alpha-max: 0.10;
+            --aurora-alpha-range: calc(var(--aurora-alpha-max) - var(--aurora-alpha-min));
+            --aurora-base-alpha-1: calc(var(--aurora-alpha-min) + var(--aurora-alpha-range) * 0.18);
+            --aurora-base-alpha-2: calc(var(--aurora-alpha-min) + var(--aurora-alpha-range) * 0.42);
+            --aurora-base-alpha-3: calc(var(--aurora-alpha-min) + var(--aurora-alpha-range) * 0.78);
+            --aurora-color-1: rgb(var(--aurora-color-1-rgb) / calc(var(--aurora-base-alpha-1) * var(--aurora-opacity-scale)));
+            --aurora-color-2: rgb(var(--aurora-color-2-rgb) / calc(var(--aurora-base-alpha-2) * var(--aurora-opacity-scale)));
+            --aurora-color-3: rgb(var(--aurora-color-3-rgb) / calc(var(--aurora-base-alpha-3) * var(--aurora-opacity-scale)));
+
+            --ray-angle-center: 85deg;
+            --ray-angle-range: 20deg;
+            --ray-before-angle-1: calc(var(--ray-angle-center) - 18deg);
+            --ray-before-angle-2: var(--ray-angle-center);
+            --ray-before-angle-3: calc(var(--ray-angle-center) + 17deg);
+            --ray-after-angle-1: calc(var(--ray-angle-center) - 15deg);
+            --ray-after-angle-2: calc(var(--ray-angle-center) + 3deg);
+            --ray-after-angle-3: calc(var(--ray-angle-center) + 14deg);
+            --ray-wave-angle-1: calc(var(--ray-angle-center) - 12deg);
+            --ray-wave-angle-2: calc(var(--ray-angle-center) + 7deg);
+            --ray-wave-angle-3: calc(var(--ray-angle-center) + 11deg);
+
+            --ray-density-reduction: 4.5;
+            --ray-gap-tight-base: 14px;
+            --ray-gap-regular-base: 24px;
+            --ray-gap-wide-base: 34px;
+            --ray-spacing-small-base: 32px;
+            --ray-spacing-medium-base: 52px;
+            --ray-spacing-large-base: 74px;
+            --ray-spacing-xl-base: 110px;
+            --ray-gap-tight: calc(var(--ray-gap-tight-base) * var(--ray-density-reduction));
+            --ray-gap-regular: calc(var(--ray-gap-regular-base) * var(--ray-density-reduction));
+            --ray-gap-wide: calc(var(--ray-gap-wide-base) * var(--ray-density-reduction));
+            --ray-spacing-small: calc(var(--ray-spacing-small-base) * var(--ray-density-reduction));
+            --ray-spacing-medium: calc(var(--ray-spacing-medium-base) * var(--ray-density-reduction));
+            --ray-spacing-large: calc(var(--ray-spacing-large-base) * var(--ray-density-reduction));
+            --ray-spacing-xl: calc(var(--ray-spacing-xl-base) * var(--ray-density-reduction));
+
+            --ray-width-min: 60px;
+            --ray-width-max: 360px;
+            --ray-width-range: calc(var(--ray-width-max) - var(--ray-width-min));
+            --ray-width-thin: calc(var(--ray-width-min) + var(--ray-width-range) * 0.08);
+            --ray-width-slim: calc(var(--ray-width-min) + var(--ray-width-range) * 0.28);
+            --ray-width-medium: calc(var(--ray-width-min) + var(--ray-width-range) * 0.52);
+            --ray-width-regular: calc(var(--ray-width-min) + var(--ray-width-range) * 0.72);
+            --ray-width-wide: calc(var(--ray-width-min) + var(--ray-width-range) * 0.94);
+
+            --ray-layer-duration-1: 20s;
+            --ray-layer-duration-2: 30s;
+            --ray-layer-duration-3: 40s;
+            --ray-speed-factor-fast: 1.5;
+            --ray-speed-factor-midfast: 1.2;
+            --ray-speed-factor-base: 1;
+            --ray-speed-factor-midslow: 0.85;
+            --ray-speed-factor-slow: 0.6;
+            --ray-duration-before-1: calc(var(--ray-layer-duration-1) / var(--ray-speed-factor-fast));
+            --ray-duration-before-2: calc(var(--ray-layer-duration-1) / var(--ray-speed-factor-base));
+            --ray-duration-before-3: calc(var(--ray-layer-duration-1) / var(--ray-speed-factor-midslow));
+            --ray-duration-after-1: calc(var(--ray-layer-duration-2) / var(--ray-speed-factor-midfast));
+            --ray-duration-after-2: calc(var(--ray-layer-duration-2) / var(--ray-speed-factor-base));
+            --ray-duration-after-3: calc(var(--ray-layer-duration-2) / var(--ray-speed-factor-slow));
+            --ray-duration-wave-1: calc(var(--ray-layer-duration-3) / var(--ray-speed-factor-fast));
+            --ray-duration-wave-2: calc(var(--ray-layer-duration-3) / var(--ray-speed-factor-midslow));
+            --ray-duration-wave-3: calc(var(--ray-layer-duration-3) / var(--ray-speed-factor-slow));
+            --ray-shift-distance: 840px;
+        }
+        @property --ray-before-shift-1 {
+            syntax: '<length>';
+            inherits: false;
+            initial-value: 0px;
+        }
+        @property --ray-before-shift-2 {
+            syntax: '<length>';
+            inherits: false;
+            initial-value: 0px;
+        }
+        @property --ray-before-shift-3 {
+            syntax: '<length>';
+            inherits: false;
+            initial-value: 0px;
+        }
+        @property --ray-after-shift-1 {
+            syntax: '<length>';
+            inherits: false;
+            initial-value: 0px;
+        }
+        @property --ray-after-shift-2 {
+            syntax: '<length>';
+            inherits: false;
+            initial-value: 0px;
+        }
+        @property --ray-after-shift-3 {
+            syntax: '<length>';
+            inherits: false;
+            initial-value: 0px;
+        }
+        @property --ray-wave-shift-1 {
+            syntax: '<length>';
+            inherits: false;
+            initial-value: 0px;
+        }
+        @property --ray-wave-shift-2 {
+            syntax: '<length>';
+            inherits: false;
+            initial-value: 0px;
+        }
+        @property --ray-wave-shift-3 {
+            syntax: '<length>';
+            inherits: false;
+            initial-value: 0px;
         }
         [data-theme="dark"] {
             --bg-color: #1a1a2e;
@@ -19,14 +134,16 @@
             --section-bg: #1a1a2e;
             --link-color: #64b5f6;
             --paper-authors: #aaa;
-            --aurora-color-1: rgba(120, 180, 255, 0.13);
-            --aurora-color-2: rgba(40, 80, 180, 0.10);
-            --aurora-color-3: rgba(140, 200, 255, 0.11);
-        }
-        :root {
-            --aurora-color-1: rgba(100, 160, 240, 0.17);
-            --aurora-color-2: rgba(30, 60, 160, 0.12);
-            --aurora-color-3: rgba(120, 180, 250, 0.14);
+
+            --aurora-color-1-rgb: 120 180 255;
+            --aurora-color-2-rgb: 40 80 180;
+            --aurora-color-3-rgb: 140 200 255;
+            --aurora-base-alpha-1: calc(var(--aurora-alpha-min) + var(--aurora-alpha-range) * 0.30);
+            --aurora-base-alpha-2: calc(var(--aurora-alpha-min) + var(--aurora-alpha-range) * 0.55);
+            --aurora-base-alpha-3: calc(var(--aurora-alpha-min) + var(--aurora-alpha-range) * 0.88);
+            --aurora-color-1: rgb(var(--aurora-color-1-rgb) / calc(var(--aurora-base-alpha-1) * var(--aurora-opacity-scale)));
+            --aurora-color-2: rgb(var(--aurora-color-2-rgb) / calc(var(--aurora-base-alpha-2) * var(--aurora-opacity-scale)));
+            --aurora-color-3: rgb(var(--aurora-color-3-rgb) / calc(var(--aurora-base-alpha-3) * var(--aurora-opacity-scale)));
         }
         html, body {
             height: 100%;
@@ -61,24 +178,41 @@
             height: 200%;
             top: -50%;
             left: -50%;
-            background: repeating-linear-gradient(
-                78deg,
-                transparent 0px, transparent 20px,
-                var(--aurora-color-1) 20px, var(--aurora-color-1) 24px,
-                transparent 24px, transparent 60px,
-                var(--aurora-color-2) 60px, var(--aurora-color-2) 130px,
-                transparent 130px, transparent 160px,
-                var(--aurora-color-1) 160px, var(--aurora-color-1) 166px,
-                transparent 166px, transparent 200px,
-                var(--aurora-color-1) 200px, var(--aurora-color-1) 230px,
-                transparent 230px, transparent 260px,
-                var(--aurora-color-2) 260px, var(--aurora-color-2) 265px,
-                transparent 265px, transparent 300px,
-                var(--aurora-color-1) 300px, var(--aurora-color-1) 310px,
-                transparent 310px, transparent 400px
-            );
+            background:
+                repeating-linear-gradient(
+                    var(--ray-before-angle-1),
+                    transparent 0 var(--ray-gap-tight),
+                    var(--aurora-color-1) var(--ray-gap-tight) calc(var(--ray-gap-tight) + var(--ray-width-thin)),
+                    transparent calc(var(--ray-gap-tight) + var(--ray-width-thin)) calc(var(--ray-gap-tight) + var(--ray-width-thin) + var(--ray-spacing-small)),
+                    var(--aurora-color-2) calc(var(--ray-gap-tight) + var(--ray-width-thin) + var(--ray-spacing-small)) calc(var(--ray-gap-tight) + var(--ray-width-thin) + var(--ray-spacing-small) + var(--ray-width-wide)),
+                    transparent calc(var(--ray-gap-tight) + var(--ray-width-thin) + var(--ray-spacing-small) + var(--ray-width-wide)) calc(var(--ray-gap-tight) + var(--ray-width-thin) + var(--ray-spacing-small) + var(--ray-width-wide) + var(--ray-spacing-large))
+                ),
+                repeating-linear-gradient(
+                    var(--ray-before-angle-2),
+                    transparent 0 var(--ray-gap-regular),
+                    var(--aurora-color-2) var(--ray-gap-regular) calc(var(--ray-gap-regular) + var(--ray-width-slim)),
+                    transparent calc(var(--ray-gap-regular) + var(--ray-width-slim)) calc(var(--ray-gap-regular) + var(--ray-width-slim) + var(--ray-spacing-medium)),
+                    var(--aurora-color-1) calc(var(--ray-gap-regular) + var(--ray-width-slim) + var(--ray-spacing-medium)) calc(var(--ray-gap-regular) + var(--ray-width-slim) + var(--ray-spacing-medium) + var(--ray-width-regular)),
+                    transparent calc(var(--ray-gap-regular) + var(--ray-width-slim) + var(--ray-spacing-medium) + var(--ray-width-regular)) calc(var(--ray-gap-regular) + var(--ray-width-slim) + var(--ray-spacing-medium) + var(--ray-width-regular) + var(--ray-spacing-xl))
+                ),
+                repeating-linear-gradient(
+                    var(--ray-before-angle-3),
+                    transparent 0 var(--ray-gap-wide),
+                    var(--aurora-color-3) var(--ray-gap-wide) calc(var(--ray-gap-wide) + var(--ray-width-thin)),
+                    transparent calc(var(--ray-gap-wide) + var(--ray-width-thin)) calc(var(--ray-gap-wide) + var(--ray-width-thin) + var(--ray-spacing-large)),
+                    var(--aurora-color-1) calc(var(--ray-gap-wide) + var(--ray-width-thin) + var(--ray-spacing-large)) calc(var(--ray-gap-wide) + var(--ray-width-thin) + var(--ray-spacing-large) + var(--ray-width-regular)),
+                    transparent calc(var(--ray-gap-wide) + var(--ray-width-thin) + var(--ray-spacing-large) + var(--ray-width-regular)) calc(var(--ray-gap-wide) + var(--ray-width-thin) + var(--ray-spacing-large) + var(--ray-width-regular) + var(--ray-spacing-medium))
+                );
+            background-position:
+                var(--ray-before-shift-1) 0,
+                var(--ray-before-shift-2) 0,
+                var(--ray-before-shift-3) 0;
             filter: blur(8px);
-            animation: rays-move-1 20s linear infinite;
+            animation:
+                rays-move-1 var(--ray-layer-duration-1) linear infinite,
+                ray-shift-before-1 var(--ray-duration-before-1) linear infinite,
+                ray-shift-before-2 var(--ray-duration-before-2) linear infinite,
+                ray-shift-before-3 var(--ray-duration-before-3) linear infinite;
         }
         .aurora-bg::after {
             content: '';
@@ -87,22 +221,41 @@
             height: 200%;
             top: -50%;
             left: -50%;
-            background: repeating-linear-gradient(
-                92deg,
-                transparent 0px, transparent 30px,
-                var(--aurora-color-2) 30px, var(--aurora-color-2) 38px,
-                transparent 38px, transparent 70px,
-                var(--aurora-color-1) 70px, var(--aurora-color-1) 160px,
-                transparent 160px, transparent 200px,
-                var(--aurora-color-3) 200px, var(--aurora-color-3) 205px,
-                transparent 205px, transparent 240px,
-                var(--aurora-color-2) 240px, var(--aurora-color-2) 260px,
-                transparent 260px, transparent 290px,
-                var(--aurora-color-1) 290px, var(--aurora-color-1) 296px,
-                transparent 296px, transparent 350px
-            );
+            background:
+                repeating-linear-gradient(
+                    var(--ray-after-angle-1),
+                    transparent 0 var(--ray-gap-regular),
+                    var(--aurora-color-2) var(--ray-gap-regular) calc(var(--ray-gap-regular) + var(--ray-width-slim)),
+                    transparent calc(var(--ray-gap-regular) + var(--ray-width-slim)) calc(var(--ray-gap-regular) + var(--ray-width-slim) + var(--ray-spacing-small)),
+                    var(--aurora-color-1) calc(var(--ray-gap-regular) + var(--ray-width-slim) + var(--ray-spacing-small)) calc(var(--ray-gap-regular) + var(--ray-width-slim) + var(--ray-spacing-small) + var(--ray-width-regular)),
+                    transparent calc(var(--ray-gap-regular) + var(--ray-width-slim) + var(--ray-spacing-small) + var(--ray-width-regular)) calc(var(--ray-gap-regular) + var(--ray-width-slim) + var(--ray-spacing-small) + var(--ray-width-regular) + var(--ray-spacing-large))
+                ),
+                repeating-linear-gradient(
+                    var(--ray-after-angle-2),
+                    transparent 0 var(--ray-gap-tight),
+                    var(--aurora-color-1) var(--ray-gap-tight) calc(var(--ray-gap-tight) + var(--ray-width-medium)),
+                    transparent calc(var(--ray-gap-tight) + var(--ray-width-medium)) calc(var(--ray-gap-tight) + var(--ray-width-medium) + var(--ray-spacing-medium)),
+                    var(--aurora-color-2) calc(var(--ray-gap-tight) + var(--ray-width-medium) + var(--ray-spacing-medium)) calc(var(--ray-gap-tight) + var(--ray-width-medium) + var(--ray-spacing-medium) + var(--ray-width-wide)),
+                    transparent calc(var(--ray-gap-tight) + var(--ray-width-medium) + var(--ray-spacing-medium) + var(--ray-width-wide)) calc(var(--ray-gap-tight) + var(--ray-width-medium) + var(--ray-spacing-medium) + var(--ray-width-wide) + var(--ray-spacing-xl))
+                ),
+                repeating-linear-gradient(
+                    var(--ray-after-angle-3),
+                    transparent 0 var(--ray-gap-wide),
+                    var(--aurora-color-3) var(--ray-gap-wide) calc(var(--ray-gap-wide) + var(--ray-width-slim)),
+                    transparent calc(var(--ray-gap-wide) + var(--ray-width-slim)) calc(var(--ray-gap-wide) + var(--ray-width-slim) + var(--ray-spacing-large)),
+                    var(--aurora-color-1) calc(var(--ray-gap-wide) + var(--ray-width-slim) + var(--ray-spacing-large)) calc(var(--ray-gap-wide) + var(--ray-width-slim) + var(--ray-spacing-large) + var(--ray-width-regular)),
+                    transparent calc(var(--ray-gap-wide) + var(--ray-width-slim) + var(--ray-spacing-large) + var(--ray-width-regular)) calc(var(--ray-gap-wide) + var(--ray-width-slim) + var(--ray-spacing-large) + var(--ray-width-regular) + var(--ray-spacing-medium))
+                );
+            background-position:
+                var(--ray-after-shift-1) 0,
+                var(--ray-after-shift-2) 0,
+                var(--ray-after-shift-3) 0;
             filter: blur(12px);
-            animation: rays-move-2 30s linear infinite reverse;
+            animation:
+                rays-move-2 var(--ray-layer-duration-2) linear infinite reverse,
+                ray-shift-after-1 var(--ray-duration-after-1) linear infinite,
+                ray-shift-after-2 var(--ray-duration-after-2) linear infinite,
+                ray-shift-after-3 var(--ray-duration-after-3) linear infinite;
             opacity: 0.8;
         }
         .aurora-wave {
@@ -111,26 +264,78 @@
             height: 200%;
             top: -50%;
             left: -50%;
-            background: repeating-linear-gradient(
-                85deg,
-                transparent 0px, transparent 40px,
-                var(--aurora-color-3) 40px, var(--aurora-color-3) 45px,
-                transparent 45px, transparent 80px,
-                var(--aurora-color-1) 80px, var(--aurora-color-1) 86px,
-                transparent 86px, transparent 130px,
-                var(--aurora-color-2) 130px, var(--aurora-color-2) 190px,
-                transparent 190px, transparent 230px,
-                var(--aurora-color-1) 230px, var(--aurora-color-1) 238px,
-                transparent 238px, transparent 280px,
-                var(--aurora-color-3) 280px, var(--aurora-color-3) 320px,
-                transparent 320px, transparent 360px,
-                var(--aurora-color-2) 360px, var(--aurora-color-2) 365px,
-                transparent 365px, transparent 450px
-            );
+            background:
+                repeating-linear-gradient(
+                    var(--ray-wave-angle-1),
+                    transparent 0 var(--ray-gap-tight),
+                    var(--aurora-color-3) var(--ray-gap-tight) calc(var(--ray-gap-tight) + var(--ray-width-slim)),
+                    transparent calc(var(--ray-gap-tight) + var(--ray-width-slim)) calc(var(--ray-gap-tight) + var(--ray-width-slim) + var(--ray-spacing-medium)),
+                    var(--aurora-color-1) calc(var(--ray-gap-tight) + var(--ray-width-slim) + var(--ray-spacing-medium)) calc(var(--ray-gap-tight) + var(--ray-width-slim) + var(--ray-spacing-medium) + var(--ray-width-regular)),
+                    transparent calc(var(--ray-gap-tight) + var(--ray-width-slim) + var(--ray-spacing-medium) + var(--ray-width-regular)) calc(var(--ray-gap-tight) + var(--ray-width-slim) + var(--ray-spacing-medium) + var(--ray-width-regular) + var(--ray-spacing-large))
+                ),
+                repeating-linear-gradient(
+                    var(--ray-wave-angle-2),
+                    transparent 0 var(--ray-gap-regular),
+                    var(--aurora-color-1) var(--ray-gap-regular) calc(var(--ray-gap-regular) + var(--ray-width-thin)),
+                    transparent calc(var(--ray-gap-regular) + var(--ray-width-thin)) calc(var(--ray-gap-regular) + var(--ray-width-thin) + var(--ray-spacing-small)),
+                    var(--aurora-color-3) calc(var(--ray-gap-regular) + var(--ray-width-thin) + var(--ray-spacing-small)) calc(var(--ray-gap-regular) + var(--ray-width-thin) + var(--ray-spacing-small) + var(--ray-width-wide)),
+                    transparent calc(var(--ray-gap-regular) + var(--ray-width-thin) + var(--ray-spacing-small) + var(--ray-width-wide)) calc(var(--ray-gap-regular) + var(--ray-width-thin) + var(--ray-spacing-small) + var(--ray-width-wide) + var(--ray-spacing-xl))
+                ),
+                repeating-linear-gradient(
+                    var(--ray-wave-angle-3),
+                    transparent 0 var(--ray-gap-wide),
+                    var(--aurora-color-2) var(--ray-gap-wide) calc(var(--ray-gap-wide) + var(--ray-width-slim)),
+                    transparent calc(var(--ray-gap-wide) + var(--ray-width-slim)) calc(var(--ray-gap-wide) + var(--ray-width-slim) + var(--ray-spacing-medium)),
+                    var(--aurora-color-1) calc(var(--ray-gap-wide) + var(--ray-width-slim) + var(--ray-spacing-medium)) calc(var(--ray-gap-wide) + var(--ray-width-slim) + var(--ray-spacing-medium) + var(--ray-width-regular)),
+                    transparent calc(var(--ray-gap-wide) + var(--ray-width-slim) + var(--ray-spacing-medium) + var(--ray-width-regular)) calc(var(--ray-gap-wide) + var(--ray-width-slim) + var(--ray-spacing-medium) + var(--ray-width-regular) + var(--ray-spacing-large))
+                );
+            background-position:
+                var(--ray-wave-shift-1) 0,
+                var(--ray-wave-shift-2) 0,
+                var(--ray-wave-shift-3) 0;
             filter: blur(15px);
-            animation: rays-move-3 40s linear infinite;
-            animation-delay: -8s;
+            animation:
+                rays-move-3 var(--ray-layer-duration-3) linear infinite -8s,
+                ray-shift-wave-1 var(--ray-duration-wave-1) linear infinite,
+                ray-shift-wave-2 var(--ray-duration-wave-2) linear infinite,
+                ray-shift-wave-3 var(--ray-duration-wave-3) linear infinite;
             opacity: 0.6;
+        }
+        @keyframes ray-shift-before-1 {
+            from { --ray-before-shift-1: 0px; }
+            to { --ray-before-shift-1: var(--ray-shift-distance); }
+        }
+        @keyframes ray-shift-before-2 {
+            from { --ray-before-shift-2: 0px; }
+            to { --ray-before-shift-2: var(--ray-shift-distance); }
+        }
+        @keyframes ray-shift-before-3 {
+            from { --ray-before-shift-3: 0px; }
+            to { --ray-before-shift-3: var(--ray-shift-distance); }
+        }
+        @keyframes ray-shift-after-1 {
+            from { --ray-after-shift-1: 0px; }
+            to { --ray-after-shift-1: var(--ray-shift-distance); }
+        }
+        @keyframes ray-shift-after-2 {
+            from { --ray-after-shift-2: 0px; }
+            to { --ray-after-shift-2: var(--ray-shift-distance); }
+        }
+        @keyframes ray-shift-after-3 {
+            from { --ray-after-shift-3: 0px; }
+            to { --ray-after-shift-3: var(--ray-shift-distance); }
+        }
+        @keyframes ray-shift-wave-1 {
+            from { --ray-wave-shift-1: 0px; }
+            to { --ray-wave-shift-1: var(--ray-shift-distance); }
+        }
+        @keyframes ray-shift-wave-2 {
+            from { --ray-wave-shift-2: 0px; }
+            to { --ray-wave-shift-2: var(--ray-shift-distance); }
+        }
+        @keyframes ray-shift-wave-3 {
+            from { --ray-wave-shift-3: 0px; }
+            to { --ray-wave-shift-3: var(--ray-shift-distance); }
         }
         @keyframes rays-move-1 {
             0% { transform: translateX(0) translateY(0) rotate(0deg); }
