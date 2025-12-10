@@ -26,7 +26,7 @@ A personal academic homepage for Xi Zhang, featuring research publications, proj
 ├── papers.html         # Publications page
 ├── projects.html       # Projects page
 ├── about.html          # About page
-├── langs.js            # Multi-language translations and theme toggle
+├── settings.js         # Multi-language translations and theme toggle
 ├── imgs/               # Images and icons
 │   ├── xizh-s.jpg      # Profile photo
 │   ├── orcid.svg
