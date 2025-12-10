@@ -41,6 +41,8 @@ const translations = {
         edu3: "Yan'an University (2010~2014)",
         edu3Discipline: "Biological Science",
         edu3Research: "Screening and Identification of Heavy Oil Degrading Microorganisms",
+        labelDiscipline: "Discipline:",
+        labelResearch: "Research:",
         copyright: "Designed and built by Xi Zhang. Feel free to cite or fork."
     },
     "zh-CN": {
@@ -79,6 +81,8 @@ const translations = {
         edu3: "延安大学 (2010~2014)",
         edu3Discipline: "生物科学",
         edu3Research: "重油降解微生物的筛选与鉴定",
+        labelDiscipline: "专业：",
+        labelResearch: "研究方向：",
         copyright: "网站由 Xi Zhang 设计并构建，欢迎引用或构建分支。"
     },
     "zh-TW": {
@@ -117,6 +121,8 @@ const translations = {
         edu3: "延安大學 (2010~2014)",
         edu3Discipline: "生物科學",
         edu3Research: "重油降解微生物的篩選與鑑定",
+        labelDiscipline: "專業：",
+        labelResearch: "研究方向：",
         copyright: "網站由 Xi Zhang 設計並構建，歡迎引用或構建分支。"
     }
 };
