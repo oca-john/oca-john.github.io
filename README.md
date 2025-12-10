@@ -1,7 +1,53 @@
 # 🎓 Academic
 
-This is my academic page.
+A personal academic homepage for Xi Zhang, featuring research publications, projects, and educational background.
 
-Despite the widespread adoption of deep learning facilitated by general models, I remain firmly convinced that highly specialized models are irreplaceable in the realm of expertise. Drawing inspiration from biological knowledge and employing computational techniques, I strive for an effective integration of these disciplines in my research endeavors. Currently, my research focus resides in feature representation and feature fusion of time-series data, with the ultimate objective of developing robust analysis and prediction models for such signals.
+## Features
 
-Build by Xi Zhang in November 24, 2025.
+- 🌓 Dark/Light theme toggle with smooth transitions
+- 🌐 Multi-language support (English, 简体中文, 繁體中文)
+- ✨ Animated aurora background effect
+- 📱 Responsive design
+- 🔗 Academic profile links (ORCID, Google Scholar, ResearchGate, PubMed, GitHub, LinkedIn)
+
+## Pages
+
+| Page | Description |
+|------|-------------|
+| `index.html` | Home page with profile, bio, papers overview, review experience, and projects |
+| `papers.html` | Full list of publications with journal info and impact factors |
+| `projects.html` | Research projects |
+| `about.html` | Educational background and research experience |
+
+## Project Structure
+
+```
+├── index.html          # Home page
+├── papers.html         # Publications page
+├── projects.html       # Projects page
+├── about.html          # About page
+├── langs.js            # Multi-language translations and theme toggle
+├── imgs/               # Images and icons
+│   ├── xizh-s.jpg      # Profile photo
+│   ├── orcid.svg
+│   ├── scholar.png
+│   ├── researchgate.png
+│   ├── pubmed.png
+│   ├── github.png
+│   ├── linkedin.png
+│   └── twitter*.png
+├── LICENSE
+└── README.md
+```
+
+## Usage
+
+Simply open `index.html` in a browser or deploy to any static hosting service (GitHub Pages, Netlify, etc.).
+
+## License
+
+MIT License
+
+---
+
+Built by Xi Zhang · November 2025
