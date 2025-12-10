@@ -181,3 +181,19 @@ document.addEventListener('DOMContentLoaded', () => {
         yearEl.textContent = new Date().getFullYear();
     }
 });
+
+// 监听其他标签页的语言变化，实现跨页面同步
+window.addEventListener('storage', (e) => {
+    if (e.key === 'lang') {
+        applyTranslations();
+        updateLangButtons();
+    }
+});
+
+// 页面可见时重新应用语言（处理从其他页面切换回来的情况）
+document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') {
+        applyTranslations();
+        updateLangButtons();
+    }
+});
