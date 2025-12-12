@@ -346,6 +346,22 @@
         section a {
             color: var(--link-color);
         }
+        .paper-item {
+            margin-bottom: 15px;
+        }
+        .paper-title {
+            font-weight: normal;
+        }
+        .paper-authors {
+            color: var(--paper-authors);
+            font-size: 0.95em;
+            margin-left: 2em;
+        }
+        .edu-details {
+            color: var(--paper-authors);
+            font-size: 0.95em;
+            margin-left: 2em;
+        }
         .theme-toggle {
             background: transparent;
             border: 1px solid #fff;
@@ -385,21 +401,21 @@
             <h2 data-i18n="aboutTitle">&#128214; About me</h2>
             <p data-i18n="aboutDesc">With a solid foundation in biological sciences, I began my research career studying microbial ecology before advancing to biochemistry and molecular biology. During my doctoral studies in biomedical engineering, I developed expertise in deep learning modeling for physiological signal analysis, particularly in high-altitude hypoxia research. Currently, as a postdoctoral researcher at Liangzhu Laboratory, I am pioneering interdisciplinary research that integrates my biological background with computational deep learning techniques to advance optical brain-computer interface technologies.</p>
             <ol>
-                <li>
-                    <a href="http://liangzhulab.zju.edu.cn/"><span data-i18n="edu0">Liangzhu Laboratory, Zhejiang University (2025~Present)</span></a>
-                    <br><span data-i18n="labelDiscipline">Discipline:</span> <span data-i18n="edu0Discipline">Brain and Brain Science</span> &emsp;|&emsp; <span data-i18n="labelResearch">Research:</span> <span data-i18n="edu0Research">Optical Brain-Computer Interface</span>
+                <li class="paper-item">
+                    <span class="paper-title"><a href="http://liangzhulab.zju.edu.cn/"><span data-i18n="edu0">Liangzhu Laboratory, Zhejiang University (2025~Present)</span></a></span>
+                    <div class="edu-details"><span data-i18n="labelDiscipline">Discipline:</span> <span data-i18n="edu0Discipline">Brain and Brain Science</span> &emsp;|&emsp; <span data-i18n="labelResearch">Research:</span> <span data-i18n="edu0Research">Optical Brain-Computer Interface</span></div>
                 </li>
-                <li>
-                    <a href="https://www.nwpu.edu.cn/"><span data-i18n="edu1">Northwestern Polytechnical University (2018~2025)</span></a>
-                    <br><span data-i18n="labelDiscipline">Discipline:</span> <span data-i18n="edu1Discipline">Biomedical Engineering</span> &emsp;|&emsp; <span data-i18n="labelResearch">Research:</span> <span data-i18n="edu1Research">High-Altitude Hypoxia Physiology and Deep Learning Modeling</span>
+                <li class="paper-item">
+                    <span class="paper-title"><a href="https://www.nwpu.edu.cn/"><span data-i18n="edu1">Northwestern Polytechnical University (2018~2025)</span></a></span>
+                    <div class="edu-details"><span data-i18n="labelDiscipline">Discipline:</span> <span data-i18n="edu1Discipline">Biomedical Engineering</span> &emsp;|&emsp; <span data-i18n="labelResearch">Research:</span> <span data-i18n="edu1Research">High-Altitude Hypoxia Physiology and Deep Learning Modeling</span></div>
                 </li>
-                <li>
-                    <a href="https://www.snnu.edu.cn/"><span data-i18n="edu2">Shaanxi Normal University (2014~2018)</span></a>
-                    <br><span data-i18n="labelDiscipline">Discipline:</span> <span data-i18n="edu2Discipline">Biochemistry and Molecular Biology</span> &emsp;|&emsp; <span data-i18n="labelResearch">Research:</span> <span data-i18n="edu2Research">Mouse Somatic Cell Immortalization</span>
+                <li class="paper-item">
+                    <span class="paper-title"><a href="https://www.snnu.edu.cn/"><span data-i18n="edu2">Shaanxi Normal University (2014~2018)</span></a></span>
+                    <div class="edu-details"><span data-i18n="labelDiscipline">Discipline:</span> <span data-i18n="edu2Discipline">Biochemistry and Molecular Biology</span> &emsp;|&emsp; <span data-i18n="labelResearch">Research:</span> <span data-i18n="edu2Research">Mouse Somatic Cell Immortalization</span></div>
                 </li>
-                <li>
-                    <a href="https://www.yau.edu.cn"><span data-i18n="edu3">Yan'an University (2010~2014)</span></a>
-                    <br><span data-i18n="labelDiscipline">Discipline:</span> <span data-i18n="edu3Discipline">Biological Science</span> &emsp;|&emsp; <span data-i18n="labelResearch">Research:</span> <span data-i18n="edu3Research">Screening and Identification of Heavy Oil Degrading Microorganisms</span>
+                <li class="paper-item">
+                    <span class="paper-title"><a href="https://www.yau.edu.cn"><span data-i18n="edu3">Yan'an University (2010~2014)</span></a></span>
+                    <div class="edu-details"><span data-i18n="labelDiscipline">Discipline:</span> <span data-i18n="edu3Discipline">Biological Science</span> &emsp;|&emsp; <span data-i18n="labelResearch">Research:</span> <span data-i18n="edu3Research">Screening and Identification of Heavy Oil Degrading Microorganisms</span></div>
                 </li>
             </ol>
         </div>
