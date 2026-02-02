@@ -590,9 +590,8 @@
                     <span class="paper-title"><i>Biomedical Signal Processing and Control</i></span>
                     <div class="paper-authors">
                         <details class="cert-details" style="display: inline;">
-                            <summary
-                                style="cursor: pointer; color: #0056b3; font-size: 0.85em; outline: none; user-select: none; display: inline;">
-                                <span style="border-bottom: 1px dashed #0056b3;">[📄 View Certificate]</span>
+                            <summary class="cert-summary">
+                                <span class="cert-link" data-i18n="viewCertificate">[📄 View Certificate]</span>
                             </summary>
                         </details>
                         &emsp;|&emsp; <span data-i18n="reviewDate">Date:</span> 2025 &emsp;|&emsp; <span
@@ -608,6 +607,24 @@
                         .cert-details[open]+*+*+.pdf-wrapper,
                         .paper-authors:has(.cert-details[open])+.pdf-wrapper {
                             display: block !important;
+                        }
+
+                        .cert-summary {
+                            cursor: pointer;
+                            font-size: 0.85em;
+                            outline: none;
+                            user-select: none;
+                            display: inline;
+                        }
+
+                        .cert-link {
+                            color: #0056b3;
+                            border-bottom: 1px dashed #0056b3;
+                        }
+
+                        [data-theme="dark"] .cert-link {
+                            color: #ffd700;
+                            border-bottom: 1px dashed #ffd700;
                         }
                     </style>
                 </li>
