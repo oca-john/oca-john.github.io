@@ -10,7 +10,7 @@ A personal academic homepage for Xi Zhang, featuring research publications, proj
 - 📱 Responsive design
 - 🔗 Academic profile links (ORCID, Google Scholar, ResearchGate, PubMed, GitHub, LinkedIn)
 
-## Preview
+## Previews
 
 <table border="0">
   <tr>
