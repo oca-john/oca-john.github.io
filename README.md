@@ -14,20 +14,21 @@ A personal academic homepage for Xi Zhang, featuring research publications, proj
   <tr>
     <td align="center" valign="bottom">
       <a href="./imgs/page-light.png">
-        <img src="./imgs/page-light.png" width="200">
+        <img src="./imgs/page-light.png" width="320">
       </a>
       <br>
       <p align="center">亮色主题</p>
     </td>
     <td align="center" valign="bottom">
       <a href="./imgs/page-dark.png">
-        <img src="./imgs/page-dark.png" width="200">
+        <img src="./imgs/page-dark.png" width="320">
       </a>
       <br>
       <p align="center">暗色主题</p>
     </td>
   </tr>
 </table>
+
 
 ## Pages
 
