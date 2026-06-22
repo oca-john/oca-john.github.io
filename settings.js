@@ -16,6 +16,7 @@ const translations = {
         research: "I am currently engaged in optical brain-computer interface research, primarily focusing on optical-based brain signal reading, decoding, optical signal writing, and encoding.",
         // Section titles
         papersTitle: "📰 Papers",
+        figshareDatasetLabel: "(Figshare dataset)",
         reviewTitle: "📝 Review Experience",
         reviewDate: "Date:",
         reviewRole: "Role:",
@@ -77,6 +78,7 @@ const translations = {
         bio: "尽管通用模型推动了深度学习的广泛应用，但我始终坚信，高度专业化的模型在专业领域是不可替代的。借鉴生物学知识并运用计算技术，我致力于在研究中实现这些学科的有效融合。目前，我的研究重点是时间序列数据的特征表示和特征融合，最终目标是开发稳健的信号分析和预测模型。",
         research: "我目前从事光学脑机接口研究，主要开展基于光学的大脑信号读取、解码、光信号写入、编码。",
         papersTitle: "📰 论文",
+        figshareDatasetLabel: "（Figshare数据集）",
         reviewTitle: "📝 审稿经历",
         reviewDate: "日期：",
         reviewRole: "角色：",
@@ -137,6 +139,7 @@ const translations = {
         bio: "儘管通用模型推動了深度學習的廣泛應用，但我始終堅信，高度專業化的模型在專業領域是不可替代的。借鑑生物學知識並運用計算技術，我致力於在研究中實現這些學科的有效融合。目前，我的研究重點是時間序列數據的特徵表示和特徵融合，最終目標是開發穩健的信號分析和預測模型。",
         research: "我目前從事光學腦機接口研究，主要開展基於光學的大腦信號讀取、解碼、光信號寫入、編碼。",
         papersTitle: "📰 論文",
+        figshareDatasetLabel: "（Figshare數據集）",
         reviewTitle: "📝 審稿經歷",
         reviewDate: "日期：",
         reviewRole: "角色：",
